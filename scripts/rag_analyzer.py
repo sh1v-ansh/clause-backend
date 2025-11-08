@@ -648,31 +648,123 @@ Return ONLY valid JSON, no additional text."""
         Returns:
             AI-generated answer
         """
-        # Prepare context
-        law_context = []
-        for law in relevant_laws:
-            law_context.append(
-                f"[Chapter {law['chapter']}, {law['section']}]\n{law['text']}"
-            )
-        
-        legal_context = "\n\n---\n\n".join(law_context)
-        
-        prompt = f"""You are a legal assistant specializing in Massachusetts housing law.
-Answer the following question based on the provided legal statutes.
+        try:
+            # Prepare context
+            law_context = []
+            for law in relevant_laws:
+                law_context.append(
+                    f"[M.G.L. c. {law['chapter']}, §{law['section']}]\n{law['text']}"
+                )
+            
+            legal_context = "\n\n---\n\n".join(law_context) if law_context else "No specific statutes found, but provide general guidance based on Massachusetts housing law."
+            
+            # Build a more conversational and helpful prompt
+            system_instruction = """You are a friendly and knowledgeable legal assistant specializing in Massachusetts housing and tenant law. 
+Your role is to help tenants understand their rights and answer questions about lease agreements and housing law.
+
+Guidelines:
+- Be conversational, friendly, and empathetic
+- Explain legal concepts in simple, understandable language
+- Always cite specific statutes when referencing laws (format: M.G.L. c. [chapter], §[section])
+- If document analysis context is provided, reference the specific findings, issues, and highlights from that analysis
+- When discussing findings from the document analysis, mention specific categories, statutes, and potential recovery amounts when relevant
+- If the question relates to a specific document, reference it naturally and use the analysis data to provide accurate, document-specific answers
+- Provide actionable advice when possible
+- If you're unsure about something, say so and suggest consulting a lawyer
+- Keep responses concise but thorough (2-4 paragraphs typically)"""
+            
+            # Check if context includes document analysis
+            has_document_analysis = context and "=== DOCUMENT ANALYSIS ===" in context
+            
+            if has_document_analysis:
+                prompt = f"""{system_instruction}
+
+Document Analysis Context:
+{context}
+
+Relevant Massachusetts Housing Laws:
+{legal_context}
+
+User Question: {question}
+
+Please provide a helpful, clear answer to the user's question. Reference the specific findings from the document analysis when relevant, and be conversational and friendly while being accurate about the law."""
+            else:
+                prompt = f"""{system_instruction}
 
 {context if context else ""}
 
-Legal Statutes:
+Relevant Massachusetts Housing Laws:
 {legal_context}
 
-Question: {question}
+User Question: {question}
 
-Provide a clear, accurate answer with citations to specific statutes."""
-        
-        model = genai.GenerativeModel('gemini-2.0-flash-exp')
-        response = model.generate_content(prompt)
-        
-        return response.text
+Please provide a helpful, clear answer to the user's question. Be conversational and friendly while being accurate about the law."""
+            
+            print(f"🤖 Generating chat response with Gemini for question: {question[:100]}...")
+            
+            # Try different Gemini models in order of preference
+            models_to_try = [
+                'gemini-1.5-flash',  # Fast and reliable
+                'gemini-1.5-pro',    # More capable
+                'gemini-pro',        # Stable fallback
+                'gemini-2.0-flash-exp',  # Experimental
+            ]
+            
+            model = None
+            response = None
+            last_error = None
+            
+            for model_name in models_to_try:
+                try:
+                    print(f"   Trying model: {model_name}")
+                    # Create generation config as dict
+                    generation_config = {
+                        'temperature': 0.7,  # Balance between creative and factual
+                        'top_p': 0.95,
+                        'top_k': 40,
+                        'max_output_tokens': 1024,
+                    }
+                    model = genai.GenerativeModel(
+                        model_name,
+                        generation_config=generation_config
+                    )
+                    response = model.generate_content(prompt)
+                    print(f"   ✅ Successfully used model: {model_name}")
+                    break
+                except Exception as e:
+                    print(f"   ⚠️  Model {model_name} failed: {e}")
+                    last_error = e
+                    continue
+            
+            if not response:
+                raise Exception(f"All Gemini models failed. Last error: {last_error}")
+            
+            # Extract text from response
+            answer = None
+            if hasattr(response, 'text') and response.text:
+                answer = response.text.strip()
+            elif hasattr(response, 'candidates') and response.candidates:
+                if len(response.candidates) > 0:
+                    candidate = response.candidates[0]
+                    if hasattr(candidate, 'content') and hasattr(candidate.content, 'parts'):
+                        if len(candidate.content.parts) > 0:
+                            answer = candidate.content.parts[0].text.strip()
+                    elif hasattr(candidate, 'text'):
+                        answer = candidate.text.strip()
+            
+            if not answer:
+                # Last resort: try to convert to string
+                answer = str(response).strip()
+                if not answer or answer.startswith('<'):
+                    raise Exception("Could not extract text from Gemini response")
+            
+            print(f"✅ Generated response ({len(answer)} chars): {answer[:100]}...")
+            return answer
+            
+        except Exception as e:
+            print(f"❌ Error generating chat response: {e}")
+            # Return a helpful fallback message
+            return f"I apologize, but I encountered an error while generating a response. Please try rephrasing your question. Error: {str(e)}"
     
     def close(self):
         """Close Snowflake connection"""
