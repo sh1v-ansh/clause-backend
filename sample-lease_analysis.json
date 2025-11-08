@@ -1,0 +1,266 @@
+{
+  "illegal_clauses": [
+    {
+      "clause": "The Premises are delivered to Tenant and Tenant accepts the Premises in their present condition, \u201cAS IS,\u201d it being agreed that Tenant has had a n opportunity to examine and inspect the Premises in all respects, that Landlord has made no representations or warranties of any kind with respect thereto, and that Landlord shall have no obligation to do any work on, or make any improvements to the Premi ses or the condition thereof.",
+      "violation": "Implied Warranty of Habitability; Chapter 186 \u00a715; Chapter 93A",
+      "explanation": "This clause attempts to waive the implied warranty of habitability, which requires landlords to provide safe and habitable living conditions. While this is a commercial lease, an 'as is' clause can still create issues under Chapter 93A if the landlord knows of significant defects and doesn't disclose them, especially if the tenant is a small business or non-profit. A commercial tenant is entitled to a premise that is fit for its intended use. The \"as is\" clause may create an issue, because the implied warranty of suitability for its intended purpose is being waived. Chapter 93A prohibits unfair or deceptive acts or practices in trade or commerce.",
+      "severity": "high",
+      "potential_recovery": "$5000-$25,000+",
+      "recovery_calculation": "If the premises are not habitable, the tenant could sue for breach of the implied warranty of habitability and potentially under Chapter 93A if the Town acted deceptively by failing to disclose known defects. Damages could include rent abatement, costs to repair, relocation expenses, and consequential damages. Under Chapter 93A, double or triple damages could apply if the violation was knowing or willful, plus attorney's fees and costs. The estimated amount is a preliminary assessment based on the limited facts and the potential for consequential and treble damages."
+    },
+    {
+      "clause": "9.1. Indemnification.  Tenant shall, during the term hereof, assume and maintain exclusive control of the Premises and defend, indemn ify and save harmless Landlord from and against all claims, expenses or liability of whatever nature arising from any act, omission or negligence of Tenant, Tenant's contractors, agents, employees, customers, and invitees, or anyone claiming by, through or  under Tenant, or arising, directly or indirectly, from any accident, injury or damage whatsoever, however caused, to any person, or to the property of any person, occurring after Tenant enters the Premises for any reason and until the end of the term of t his Lease and, thereafter, so long as Tenant or any occupant claiming under Tenant is in occupancy of any part of the Premises, in or about the Premises, or arising from any accident occurring outside the Premises but within the general area of the Premise s, where such accident, injury or damage results or is claimed to have resulted from any act, omission or negligence on the part of Tenant or Tenant's contractors, agents, employees, customers, and invitees, or anyone claiming by, through or under Tenant.",
+      "violation": "Chapter 186, Section 15",
+      "explanation": "This clause requires the tenant to indemnify the landlord against all claims, expenses, or liability arising from any act, omission, or negligence of the tenant, irrespective of whether the landlord was also negligent. This directly violates M.G.L. c. 186, \u00a7 15, which voids any lease provision that indemnifies the landlord from liability for their own negligence. The scope of this indemnification is extremely broad and essentially makes the tenant responsible for almost any injury occurring on or near the premises regardless of fault, which is impermissible.",
+      "severity": "critical",
+      "potential_recovery": "$5000+",
+      "recovery_calculation": "Chapter 186, Section 15 voids the clause, meaning it's unenforceable. If the landlord attempted to enforce it, the tenant could sue for damages incurred in defending against such enforcement, plus potentially asserting a Chapter 93A claim for unfair and deceptive practices by including an illegal clause in the lease and attempting to enforce it. Damages are hard to quantify upfront but will include attorney fees and costs to defend against the enforcement plus any direct loss incurred."
+    },
+    {
+      "clause": "9.2. Release.  To the maximum extent this Lease may be made effective according to law, Tenant agrees to use and occupy the Premis es at Tenant's own risk, and Landlord shall have no responsibility or liability for any loss or damage to fixtures or other personal property of Tenant or any person claiming by, through or under Tenant.  Without limitation, Tenant agrees that Landlord sha ll not be responsible or liable to Tenant, or those claiming by, through or under Tenant, for any loss or damage resulting to Tenant or those claiming by, through or under Tenant, its or their property from the breaking, bursting, stopping or leaking of el ectric cables and wires, and water, gas or steam pipes.",
+      "violation": "Chapter 186, Section 15",
+      "explanation": "This is an exculpatory clause that attempts to release the landlord from liability for loss or damage to the tenant's property, even if caused by the landlord's negligence. This is explicitly prohibited by M.G.L. c. 186, \u00a7 15.",
+      "severity": "critical",
+      "potential_recovery": "$5000+",
+      "recovery_calculation": "Chapter 186, Section 15 voids this clause. If loss or damage occurred as a result of landlord's negligence and this clause was invoked, the tenant could sue for actual damages to property. Further, attempt to enforce the clause may constitute a violation of Chapter 93A entitling the tenant to double or triple damages and attorney fees. Recovery amount will depend on actual damages incurred."
+    },
+    {
+      "clause": "8.3 Hazardous Substances. Landlord shall have no responsibility to Tenant, its agents, employees, representatives and invitees, for the presence of Hazardous Substances on the Premises or be required to abate or remediate the same.",
+      "violation": "Chapter 186, Section 15 and Chapter 93A",
+      "explanation": "While a landlord can include clauses defining responsibility for *future* hazardous substances introduced by the tenant (as this clause does in its first sentence), a complete absolution of responsibility for *existing* hazardous conditions can be construed as an attempt to avoid statutory obligations to maintain a safe premises and could violate Chapter 93A if the landlord knew of hazardous conditions at the commencement of the lease. A property owner has a duty to disclose known hazardous conditions to a tenant. This clause could be seen as an attempt to disclaim that duty and shift the entire risk to the tenant, even for pre-existing conditions.",
+      "severity": "high",
+      "potential_recovery": "$5000 - $50,000+",
+      "recovery_calculation": "If the tenant can demonstrate that the landlord knew of hazardous substances and failed to disclose them, causing harm to the tenant, the tenant can pursue damages under Chapter 93A. This could include medical expenses, lost wages, relocation costs and pain and suffering. The damages could be doubled or tripled under Chapter 93A. The range will depend on the extent and type of hazard and the severity of the harm caused."
+    },
+    {
+      "clause": "Tenant hereby waives any and all rights of recovery which it might otherwise have against Landlord, its agents, employees and other persons for whom Landlord may be responsible for any loss or damage to Tenant\u2019s property or improvements in the Premises which are either required to be insured under the terms of this Lease or which Tenant, in the absence of any such requirement, elects to insure, notwithstanding that the loss or damage may result from the negligence, willful act or default under the terms of this Lease by Landlord, its agents, employees, contractors, or other persons for whom Landlord may be responsible.",
+      "violation": "Chapter 186, Section 15",
+      "explanation": "This clause attempts to exculpate the landlord from liability for their own negligence or willful acts causing damage to the tenant's property. This is a violation of M.G.L. c. 186, \u00a7 15, which prohibits such clauses in leases.",
+      "severity": "critical",
+      "potential_recovery": "$10,000",
+      "recovery_calculation": "Chapter 186, Section 15 deems such waivers against public policy and void. While the statute doesn't specify a fixed damage amount, if the tenant suffers a loss due to the landlord's negligence, they could recover the actual damages sustained, plus potentially additional damages if the landlord's conduct rises to the level of a Chapter 93A violation (e.g., unfair or deceptive practices). In a commercial context, demonstrated property damages could reach several thousand dollars, and if 93A applies, double or triple damages could be awarded. The $10,000 estimate reflects potential property loss and the possibility of 93A penalties. Attorney's fees would also likely be awarded if the tenant prevails."
+    },
+    {
+      "clause": "Whenever a lease of residential property shall provide that in any action or summary proceeding the landlord may recover attorneys\u2019 fees and expenses incurred as the result of the failure of the tenant to perform any covenant or agreement contained in such lease, or that amounts paid by the landlord therefor shall be paid by the tenant as additional rent, there shall be implied in such lease a covenant by the landlord to pay to the tenant the reasonable attorneys\u2019 fees and expenses incurred by the tenant as the result of the failure of the landlord to perform any covenant or agreement on its part to be performed under the lease or in the successful defense of any action or summary proceeding commenced by the landlord against the tenant, and an agreement that such fees and expenses may be recovered as provided by law in an action commenced against the landlord or by way of counterclaim in any action or summary proceeding commenced by the landlord against the tenant. Any waiver of this section shall be void as against public policy.\n\nWithout limiting any of Landlord\u2019s rights and remedies hereunder, and in addition to all other amounts Tenant is otherwise obligated to pay, it is expressly agreed that Landlord shall be entitled to recover from Tenant all costs and expenses, including reasonable attorneys\u2019 fees, incurred by Landlord in enforcing this Lease from and after Tenant\u2019s default.",
+      "violation": "Chapter 186, Section 20",
+      "explanation": "This lease clause allows the landlord to recover attorney's fees from the tenant in certain situations. Chapter 186, Section 20 mandates that if a lease allows the landlord to recover attorney's fees, a reciprocal right is automatically implied, allowing the tenant to recover attorney's fees if they prevail against the landlord. This clause, while not explicitly illegal on its own, could be considered misleading if the lease does not clearly outline the tenant's reciprocal right to recover attorney's fees. Therefore the lease should explicitly state the tenant has that right, otherwise it could be deemed misleading and a violation of Chapter 93A.",
+      "severity": "high",
+      "potential_recovery": "$5000 - $15000+",
+      "recovery_calculation": "If the lease is deemed misleading and the tenant is forced to litigate, then the Tenant's attorney's fees and costs, plus double or triple damages under Chapter 93A, if the Landlord's actions are found to be unfair or deceptive. The amount varies depending on the complexity and length of litigation, but is usually between $5,000 and $15,000. Chapter 93A allows for double or triple damages (actual damages \u00d7 2 or \u00d7 3)."
+    }
+  ],
+  "risky_terms": [
+    {
+      "term": "Tenant shall be responsible for removing snow and ice from the Premises, including all sidewalks, walkways, and parking areas.",
+      "risk": "Liability for injuries; potentially conflicts with Landlord's responsibility for exterior walls and foundations.",
+      "explanation": "While common in commercial leases, assigning snow removal to the tenant can create liability issues if someone is injured due to negligent snow removal. It also is somewhat contradictory, in that Section 6.2. holds Landlord responsible for exterior walls and foundations. A tenant removing snow and ice from a sidewalk could be found liable for failure to properly remove snow/ice. This clause is risky because the Town retains ownership of the Premises and may also be liable under general negligence theories.",
+      "severity": "medium"
+    },
+    {
+      "term": "5.1. Delivery of Utilities. Landlord shall not be responsible for providing or paying for utilities to the Premises or for general maintenance of the Premises.",
+      "risk": "Potential for service disruptions if Tenant fails to pay; impact on building operations.",
+      "explanation": "While common, the lack of Landlord involvement in setting up or monitoring utility accounts could lead to disruptions if the Tenant fails to pay, affecting other parts of the building or the Landlord's overall property management. Additionally, while this clause is legal, a residential landlord would be unable to use the same language, so using it in a commercial lease could cause confusion with laws related to residential tenancies.",
+      "severity": "medium"
+    },
+    {
+      "term": "4.5. Interest. All payments becoming due under this Lease and not paid when due s hall bear interest from the applicable due date until received by Landlord at an annual rate equal to the prime rate of interest charged from time to time by the Bank of America or its successor, plus two percent (2%).",
+      "risk": "Potentially high interest rate could be viewed as punitive.",
+      "explanation": "While charging interest on late payments is permissible, a significantly high interest rate (prime + 2%) might be challenged as a penalty, especially if it's substantially above market rates for commercial loans. It could be seen as unconscionable under Chapter 93A.",
+      "severity": "medium"
+    },
+    {
+      "term": "6.2 Landlord\u2019s Responsibility.  Landlord shall be responsible for the electrical wiring and lighting, all plumbing and utility lines serving the Premises, the heating and ventilating system and the fire protection equipment and syste ms serving the Building, the roof, exterior walls and foundations of the Building, in good and safe order, condition and repair, reasonable wear and tear and damage by fire or other casualty excepted.",
+      "risk": "Vague definition of 'good and safe order, condition and repair' could lead to disputes; 'reasonable wear and tear' exclusion is broad.",
+      "explanation": "The language describing the Landlord's maintenance obligations is somewhat vague. What constitutes 'good and safe order, condition and repair' is subjective and could lead to disputes. Also, the exclusion of 'reasonable wear and tear' is broad and could be interpreted differently by each party. It is generally advisable for a landlord to include specific definitions for each of those phrases to avoid later disputes.",
+      "severity": "medium"
+    },
+    {
+      "term": "7.3 Liens and Encumbrances. Tenant shall not permit any mechanics\u2019 liens, or similar liens, to remain upon the Premises for labor and material furnished to Tenant or claimed to have been furnished to Tenant in connection with work of any character performed or claimed to have been performed at the direction of Tenant, and shall cause any such lien to be released of record without cost to Landlord within twenty (20) days after Tenant receives notice of filing of same. In connection with the foregoing, Tenant agrees to indemnify, save, defend, and hold harmless Landlord against, of and from all costs, liabilities, suits, penalties, claims and demands, including reasonable counsel fees, resulting there from. If Tenant shall fail to discharge such liens within such period or fail to furnish security therefor, then Landlord may, but shall not be obligated to, discharge the same, and Tenant agrees to reimburse Landlord promptly upon demand for all costs, e xpenses and other sums of money in connection therewith as Additional Rent, with interest.  All materialmen, contractors, artisans, mechanics, laborers and any other persons now or hereafter who contract with Tenant for the furnishing of any labor, service s, materials, supplies or equipment with respect to any portion of the Premises are hereby charged with notice that they must look exclusively to Tenant to obtain payment for same. Tenant agrees that it will, on request from Landlord, comply with any and all reasonable requirements of Landlord with respect to the work performed or materials furnished by Tenant or its agents, contractors, and sub -contractors in the Premises.",
+      "risk": "Financial burden on tenant; ambiguity regarding landlord's potential involvement.",
+      "explanation": "While it's reasonable to expect a tenant to manage liens arising from work they commission, the broad indemnification language is concerning. If a dispute arises with a contractor, the tenant could be forced to pay to resolve the lien even if the contractor's work was substandard or overpriced. The requirement to comply with all 'reasonable' requirements of the landlord regarding the work is vague and could lead to disputes if the landlord's requirements are subjective or overly burdensome.",
+      "severity": "medium"
+    },
+    {
+      "term": "8.5 Assignment and Subleasing.  Tenant shall not assign, sublet, underlet, mortgage, pledge or encumber (collectively referred to as \"Transfer\") this Lease without Landlord's prior written consent, which may be withheld in Landlord\u2019s sole discretion.",
+      "risk": "Unreasonable restriction on tenant's ability to leave.",
+      "explanation": "While it's standard to require landlord consent for assignment or subletting, the phrase 'which may be withheld in Landlord's sole discretion' is problematic. Massachusetts law implies a duty of good faith and fair dealing in contracts. While a landlord is not obligated to accept just any assignee, they can't arbitrarily or capriciously deny a reasonable assignment or sublease. If the landlord consistently rejects qualified applicants without a valid reason, it could be considered a violation of the implied covenant of good faith and fair dealing. Tenant needs a way out of a long lease, and this could restrict that ability. Commercial leases are usually allowed broad discretion, but it is not as broad as residential.",
+      "severity": "high"
+    },
+    {
+      "term": "Landlord shall have the same r ights and remedies for the non -payment by Tenant to Landlord of amounts due on account of insurance premiums as Landlord has under this Lease for the failure of Tenant to pay the Rent.",
+      "risk": "Potential for improper eviction proceedings.",
+      "explanation": "Treating insurance premiums as rent could lead to the landlord initiating eviction proceedings for non-payment of these premiums, even if rent is current. While not inherently illegal, it raises concerns about potentially unfair eviction practices if the tenant genuinely disputes the amount of the premium or has difficulty paying it. This also circumvents the protections afforded to residential tenants regarding security deposits and rent obligations under M.G.L. c. 186, \u00a7 15B.  This is especially problematic in a residential lease.",
+      "severity": "high"
+    },
+    {
+      "term": "If Tenant shall default after reasonable notice thereof, in the observance or performance of any conditions or covenants on Tenant\u2019s part to be performed or observed by virtue of any of the provisions of any article of this Lease, Landlord, without being under any obligation to do so and without thereby waiving such default, may remedy such default for the account and at the expense of Tenant. If Landlord makes any expenditures or incurs any obligations for the payment of money in connection with Tenant\u2019s default, including but not limited to, reasonable attorneys\u2019 fees in instituting, prosecuting or defending any action or proceeding, such sums paid or obligations incurred shall be paid to Landlord by Tenant as Additional Rent.",
+      "risk": "Potentially unreasonable charges to tenant for landlord's actions.",
+      "explanation": "While landlords generally have the right to remedy tenant defaults and charge the tenant, this clause is broad and gives the landlord significant power to incur expenses and charge them as 'Additional Rent'. The term 'reasonable notice' is subjective and could be exploited. It also doesn't limit the types of defaults the landlord can remedy.  This can become a problematic term if the landlord makes poor judgments or overcharges for remedying a minor issue.",
+      "severity": "medium"
+    },
+    {
+      "term": "Tenant shall at the expiration or other termination of this Lease remove all Tenant's effects from the Premises. Tenant shall deliver the Premises to Landlord in the condition in which Tenant is required to maintain the same as set forth in this Lease, reasonable wear and tear excepted.",
+      "risk": "Unclear maintenance obligations.",
+      "explanation": "The clause hinges on the phrase 'condition in which Tenant is required to maintain the same as set forth in this Lease'. If the lease doesn't clearly define the tenant's maintenance responsibilities, this can lead to disputes at the end of the lease regarding what constitutes proper condition and what is considered 'reasonable wear and tear'.",
+      "severity": "medium"
+    },
+    {
+      "term": "Tenant agrees that Landlord shall have no re sponsibility or liability for any loss or damage or injury from any cause whatsoever, including theft or otherwise of fixtures, improvements, or other personal property of Tenant.",
+      "risk": "Possible conflict with landlord's duty of care.",
+      "explanation": "This clause attempts to absolve the landlord of responsibility for damage to the tenant's property, even if it's caused by the landlord's negligence. While not a complete waiver of liability (which would violate M.G.L. c. 186, \u00a7 15), it could be interpreted as such. A landlord still has a duty to exercise reasonable care, and this clause could create ambiguity regarding that duty.",
+      "severity": "medium"
+    },
+    {
+      "term": "In the event of a taking by eminent domain, Landlord shall have, and hereby reserves and excepts, and Tenant hereby grants a nd assigns to Landlord, all rights to recover for damages to the Premises and the leasehold interest hereby created, and to compensation accrued or hereafter to accrue by reason of such taking or damage.  Tenant covenants to deliver such further assignment s and assurances thereof as Landlord may from time to time request, hereby irrevocably designating and appointing Landlord as its attorney -in-fact to execute and deliver in Tenant's name and behalf all such further assignments thereof.  Nothing contained h erein shall be construed to prevent Tenant from prosecuting in any condemnation proceedings a claim for the value of any of Tenant's usual trade \nfixtures installed in the Premises by Tenant at Tenant's expense and for relocation expenses, provided that suc h action shall not affect the amount of compensation otherwise recoverable hereunder by \nLandlord from the taking authority.",
+      "risk": "Dispute over eminent domain compensation.",
+      "explanation": "While allowing the tenant to claim for trade fixtures and relocation expenses is favorable, the primary portion of the clause assigns *all* rights to compensation related to the premises and leasehold to the landlord. This means the tenant cannot claim for lost business profits, future rent obligations, or other consequential damages stemming from the taking. While legally permissible in a commercial lease, the tenant should fully understand they're giving up potentially significant compensation rights.",
+      "severity": "medium"
+    },
+    {
+      "term": "If Tenant or anyone claiming under Tenant shall remain in possession of the Premises or any part thereof after the expiration of the term hereof, without any agreement in writing between Landlord and Tenant with respect thereto, the person remaining in possession shall be deemed a tenant at sufferance.",
+      "risk": "Tenant at Sufferance",
+      "explanation": "While defining 'Tenant at Sufferance' is acceptable, the lease should further clarify the implications of such a tenancy, particularly concerning the rent amount and conditions for termination, to avoid future disputes.",
+      "severity": "medium"
+    },
+    {
+      "term": "No mention in this Lease of any specific right or remedy shall preclude Landlord or Tenant from exercising any other right, or from having any other remedy, or from maintaining any action to which it may otherwise be entitled either in law or in equity.",
+      "risk": "Broad Interpretation of Rights",
+      "explanation": "While intending to preserve rights, this clause could lead to disputes over unspecified remedies and the interpretation of equitable actions. It would be better to state that there are rights provided by law that the parties retain.",
+      "severity": "medium"
+    },
+    {
+      "term": "Tenant shall deliver the Premises to Landlord in the condition in which Tenant is required to maintain the same as set forth in this Lease, reasonable wear and tear excepted.",
+      "risk": "Vague Condition Upon Termination",
+      "explanation": "The phrase 'condition in which Tenant is required to maintain' could be ambiguous. The lease should clearly define the expected condition upon termination to prevent disputes, such as requiring professional cleaning or specific repairs beyond normal wear and tear. If there is no prior definition, it could be problematic.",
+      "severity": "medium"
+    }
+  ],
+  "favorable_clauses": [
+    {
+      "clause": "6.3 Inspection.  Without limiting Landlord\u2019s rights to access the Premises under other provisions of this Lease, Landlord hereby specifically reserves the right to conduct an annua l inspection of the Premises, and Tenant shall allow entry and access to the Swampscott Fire Department, Building Inspector, and such other persons as the Board of Selectmen may designate, for the purpose of investigating the condition of the of the Premis es.  Landlord shall provide Tenant with a minimum notice of twenty -four (24) hours, and not interfere unreasonably with Tenant\u2019s use of the Premises.  Landlord may provide Tenant with a report of such assessments and list of repairs or maintenance that Lan dlord reasonably determines need to be made.",
+      "benefit": "Reasonable notice required before entry; limits interference with Tenant's use of Premises.",
+      "relevant_law": "While no specific statute dictates entry rules for commercial leases as strictly as for residential leases, the requirement of reasonable notice and non-interference protects the tenant's right to quiet enjoyment."
+    },
+    {
+      "clause": "7.1. Construction of Improvements.  Tenant shall obtain the Landlord's written approval prior to making any structural alterations or additions to the Premises.   Tenant may make non -structural alterations or additions to the Premises, including paving the unp aved, unlined parking area located around the Building.  All such allowed or required alterations or additions shall be at Tenant's sole expense, shall be in accordance with all applicable laws and codes, and shall be in quality at least equal to the prese nt construction.",
+      "benefit": "Specifically allows the tenant to make certain alterations, particularly paving the parking area.",
+      "relevant_law": "N/A"
+    },
+    {
+      "clause": "8.1 Permitted Uses.  Tenant shall use the Premises solely for the Permitted Uses. Tenant shall keep the Premises in good order, reasonable wear and tear and damage by fire or other casualty only excepted, and shall not commit or permit Tenant's servants, agents or invitees to commit waste to the Premises.",
+      "benefit": "Clarifies tenant's responsibility for reasonable wear and tear.",
+      "relevant_law": "Implied warranty of habitability"
+    },
+    {
+      "clause": "Landlord hereby warrants and covenants that Tenant shall have peaceful and quiet use and possession of the Premises without hindrance or interruption on the part of Landlord, or by any other person(s) for whose actions Landlord is legally responsible, or by any person claiming by, through or under Landlord, except as herein provided.",
+      "benefit": "Guarantees the tenant's right to quiet enjoyment of the premises.",
+      "relevant_law": "Implied covenant of quiet enjoyment exists in Massachusetts law, but this clause explicitly affirms it."
+    },
+    {
+      "clause": "Nothing contained h erein shall be construed to prevent Tenant from prosecuting in any condemnation proceedings a claim for the value of any of Tenant's usual trade \nfixtures installed in the Premises by Tenant at Tenant's expense and for relocation expenses, provided that suc h action shall not affect the amount of compensation otherwise recoverable hereunder by \nLandlord from the taking authority.",
+      "benefit": "The tenant retains the right to pursue compensation for their trade fixtures and relocation costs in the event of eminent domain, which is beneficial to the tenant's financial interests if such a taking occurs.",
+      "relevant_law": "This reinforces the tenant's existing rights under eminent domain law."
+    },
+    {
+      "clause": "Landlord hereby warrants and covenants that Tenant shall have peaceful and quiet use and possession of the Premises without hindrance or interruption on the part of Landlord, or by any other person(s) for whose actions Landlord is legally responsible, or by any person claiming by, through or under Landlord, except as herein provided.",
+      "benefit": "Guarantees Tenant's right to quiet enjoyment of the property.",
+      "relevant_law": "Implied Covenant of Quiet Enjoyment"
+    },
+    {
+      "clause": "Landlord or its agents may, at reasonable times and wit hout interfering with Tenant's business operations, enter the Premises from time to time to make repairs or to inspect the Premises.  Landlord shall give Tenant a minimum of twenty -four (24) hours\u2019 notice for such visits, provided however that Landlord may  enter the Premises at any hour and without prior notice in the case of an emergency affecting the Premises.",
+      "benefit": "Limits Landlord's right of entry and requires notice.",
+      "relevant_law": "Chapter 186, Section 15B"
+    },
+    {
+      "clause": "If any provision of this Lease is declared to be illegal, unenforceable, or void, then both parties sha ll be relieved of all obligations under that provision provided, however, that the remainder of the Lease shall be enforced to the fullest extent permitted by law.",
+      "benefit": "Severability clause ensures that the rest of the lease remains valid even if one part is deemed illegal.",
+      "relevant_law": "Standard Legal Principle"
+    }
+  ],
+  "concerns": [
+    {
+      "issue": "The Permitted Uses section is incomplete. The Tenant should ensure the permitted use is described completely.",
+      "recommendation": "The Tenant must fill in the blank with a very specific description of the permitted use to avoid future disputes with the Landlord regarding the scope of allowed business activities."
+    },
+    {
+      "issue": "The Lease refers to a Request for Proposals and a Proposal. These must be reviewed carefully to ensure they don't contradict the Lease terms.",
+      "recommendation": "The Tenant must carefully review the Request for Proposals and its Proposal to ensure the incorporated terms are consistent with the Lease and advantageous."
+    },
+    {
+      "issue": "Lack of clarity on who bears responsibility for code violations or safety issues arising during the term.",
+      "recommendation": "The lease should explicitly state who is responsible for addressing code violations or safety issues identified during the lease term, particularly those related to pre-existing conditions."
+    },
+    {
+      "issue": "While this is a commercial lease, many of the provisions appear to have been adapted from a residential lease. This can cause confusion or may expose Landlord to unintended liability.",
+      "recommendation": "The lease should be thoroughly reviewed by an attorney to ensure all the provisions are suitable for a commercial lease and to ensure that there is no liability in unintended circumstances. This also includes reviewing provisions like Section 4.2, Base Rent, to ensure that rent is set at a commercially viable rate."
+    },
+    {
+      "issue": "Lack of clarity on the 'Permitted Uses' mentioned in Section 8.1. The definition of what the Premises can be used for is missing.",
+      "recommendation": "Review the definition of Permitted Uses (should be elsewhere in the lease) to ensure it aligns with the tenant's intended use of the property. Ensure that the list of uses is wide enough to support the tenant's intended business plan, etc."
+    },
+    {
+      "issue": "The lease lacks specific clauses regarding Landlord's duties regarding habitability/repairs. While common law and statutes cover habitability, explicit lease language can benefit the tenant.",
+      "recommendation": "Seek to add clauses explicitly detailing the landlord's responsibility to maintain the property in habitable condition and to perform necessary repairs in a timely manner."
+    },
+    {
+      "issue": "The provided text appears to be from a commercial lease. Many aspects of the tenant rights and protections in MA are different between residential and commercial properties. The analysis above assumes this is for a residential lease, as the laws cited apply to residential property. The analysis needs to be re-evaluated if this is for a commercial lease.",
+      "recommendation": "Confirm whether the lease is for residential or commercial purposes. If it's commercial, the analysis and potential violations will change significantly."
+    },
+    {
+      "issue": "The insurance requirements placed on the tenant (specifically regarding contractor's insurance in Section 10.1(d)) seem onerous, especially if this is a small business tenant. The tenant should verify their ability to obtain and afford such coverage.",
+      "recommendation": "The tenant should get quotes from multiple insurance providers to ensure the coverage is attainable and affordable before signing the lease. Consider negotiating the minimum coverage amounts if they are excessive."
+    },
+    {
+      "issue": "The definition of 'substantial part' in Article XI(a) as it relates to casualty and eminent domain is subjective. This could lead to disputes over whether a casualty or taking is substantial enough to trigger lease termination.",
+      "recommendation": "Attempt to negotiate a more objective definition of 'substantial part', perhaps tying it to a percentage of the leasable area or a demonstrable impact on revenue."
+    },
+    {
+      "issue": "Several clauses mention 'reasonable' notice. What constitutes 'reasonable' can be subjective. This can cause disputes.",
+      "recommendation": "Where possible, replace the term 'reasonable' with a defined time frame (e.g. 'five business days')."
+    },
+    {
+      "issue": "The lease does not explicitly state that the property is residential or commercial, which is critical in determining which laws apply.",
+      "recommendation": "The lease should clearly state whether it is for residential or commercial purposes. The analysis above assumes residential purposes."
+    },
+    {
+      "issue": "The lease mentions holding over and tenancy at sufferance, but it lacks details about how rent is calculated during a holdover period. Landlords in MA often substantially increase the rent during the holdover period.",
+      "recommendation": "The lease should specify the rent amount or method for calculating the rent during the holdover period to protect the tenant from exorbitant increases."
+    }
+  ],
+  "power_imbalance_score": 100,
+  "potential_recovery_amount": 12500,
+  "recovery_breakdown": [
+    {
+      "violation": "Implied Warranty of Habitability; Chapter 186 \u00a715; Chapter 93A",
+      "amount": 500,
+      "calculation": "If the premises are not habitable, the tenant could sue for breach of the implied warranty of habitability and potentially under Chapter 93A if the Town acted deceptively by failing to disclose known defects. Damages could include rent abatement, costs to repair, relocation expenses, and consequential damages. Under Chapter 93A, double or triple damages could apply if the violation was knowing or willful, plus attorney's fees and costs. The estimated amount is a preliminary assessment based on the limited facts and the potential for consequential and treble damages."
+    },
+    {
+      "violation": "Chapter 186, Section 15",
+      "amount": 500,
+      "calculation": "Chapter 186, Section 15 voids the clause, meaning it's unenforceable. If the landlord attempted to enforce it, the tenant could sue for damages incurred in defending against such enforcement, plus potentially asserting a Chapter 93A claim for unfair and deceptive practices by including an illegal clause in the lease and attempting to enforce it. Damages are hard to quantify upfront but will include attorney fees and costs to defend against the enforcement plus any direct loss incurred."
+    },
+    {
+      "violation": "Chapter 186, Section 15",
+      "amount": 500,
+      "calculation": "Chapter 186, Section 15 voids this clause. If loss or damage occurred as a result of landlord's negligence and this clause was invoked, the tenant could sue for actual damages to property. Further, attempt to enforce the clause may constitute a violation of Chapter 93A entitling the tenant to double or triple damages and attorney fees. Recovery amount will depend on actual damages incurred."
+    },
+    {
+      "violation": "Chapter 186, Section 15 and Chapter 93A",
+      "amount": 500,
+      "calculation": "If the tenant can demonstrate that the landlord knew of hazardous substances and failed to disclose them, causing harm to the tenant, the tenant can pursue damages under Chapter 93A. This could include medical expenses, lost wages, relocation costs and pain and suffering. The damages could be doubled or tripled under Chapter 93A. The range will depend on the extent and type of hazard and the severity of the harm caused."
+    },
+    {
+      "violation": "Chapter 186, Section 15",
+      "amount": 10000,
+      "calculation": "Chapter 186, Section 15 deems such waivers against public policy and void. While the statute doesn't specify a fixed damage amount, if the tenant suffers a loss due to the landlord's negligence, they could recover the actual damages sustained, plus potentially additional damages if the landlord's conduct rises to the level of a Chapter 93A violation (e.g., unfair or deceptive practices). In a commercial context, demonstrated property damages could reach several thousand dollars, and if 93A applies, double or triple damages could be awarded. The $10,000 estimate reflects potential property loss and the possibility of 93A penalties. Attorney's fees would also likely be awarded if the tenant prevails."
+    },
+    {
+      "violation": "Chapter 186, Section 20",
+      "amount": 500,
+      "calculation": "If the lease is deemed misleading and the tenant is forced to litigate, then the Tenant's attorney's fees and costs, plus double or triple damages under Chapter 93A, if the Landlord's actions are found to be unfair or deceptive. The amount varies depending on the complexity and length of litigation, but is usually between $5,000 and $15,000. Chapter 93A allows for double or triple damages (actual damages \u00d7 2 or \u00d7 3)."
+    }
+  ],
+  "severity_level": "CRITICAL",
+  "summary": "\u26a0\ufe0f  Found 6 illegal clause(s) that violate Massachusetts law | \u26a1 Identified 14 risky term(s) that could be problematic | \u2713 Found 8 tenant-favorable provision(s) | Power Imbalance Score: 100/100 (Concerning)"
+}

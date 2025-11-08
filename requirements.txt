@@ -1,0 +1,23 @@
+# Snowflake and database
+snowflake-connector-python
+snowflake-snowpark-python
+
+# AI/ML
+google-generativeai
+numpy
+
+# PDF processing
+PyPDF2
+
+# Web framework
+fastapi
+uvicorn[standard]
+python-multipart
+
+# PII Detection and Security
+spacy
+cryptography
+
+# Environment and utilities
+python-dotenv
+
