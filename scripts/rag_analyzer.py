@@ -8,7 +8,8 @@ import os
 import json
 import numpy as np
 import re
-from typing import List, Dict
+from typing import List, Dict, Optional
+from datetime import datetime
 
 # Load environment variables
 load_dotenv()
@@ -32,6 +33,109 @@ class RAGAnalyzer:
         )
         self.cursor = self.conn.cursor()
         print("✓ Connected to Snowflake")
+    
+    def extract_metadata(self, lease_text: str, file_path: str = None) -> Dict:
+        """
+        Extract document metadata using Gemini (Stage 1 of analysis)
+        
+        Args:
+            lease_text: Full text of the lease document
+            file_path: Path to the PDF file (for getting page count)
+            
+        Returns:
+            Dictionary with extracted metadata
+        """
+        print("📋 Extracting document metadata...")
+        
+        # Create metadata extraction prompt
+        prompt = f"""You are a legal document analyzer. Extract the following metadata from this lease agreement.
+
+LEASE DOCUMENT:
+{lease_text[:10000]}  
+
+Extract and return the following information in JSON format:
+{{
+    "fileName": "descriptive name based on property/parties",
+    "documentType": "type of lease (e.g., Commercial Lease Agreement, Residential Lease, etc.)",
+    "parties": {{
+        "landlord": "landlord name or entity",
+        "tenant": "tenant name or [REDACTED] if not visible",
+        "property": "full property address"
+    }},
+    "leaseDetails": {{
+        "leaseType": "Commercial or Residential",
+        "propertyAddress": "full address",
+        "leaseTerm": "term description (e.g., '12 months', 'month-to-month', '3 years with renewal option')",
+        "monthlyRent": "rent amount or description (e.g., '$2,500', 'Variable - see base rent clause')",
+        "securityDeposit": "deposit amount or 'Not specified'",
+        "specialClauses": ["list of notable clauses found, e.g., 'AS-IS condition', 'Broad indemnification', etc."]
+    }}
+}}
+
+Be thorough and extract as much information as possible. If information is not found, use "Not specified" or appropriate placeholder.
+Return ONLY valid JSON, no additional text."""
+
+        try:
+            model = genai.GenerativeModel('gemini-2.0-flash-exp')
+            response = model.generate_content(prompt)
+            
+            response_text = response.text.strip()
+            
+            # Remove markdown code blocks if present
+            if '```json' in response_text:
+                response_text = response_text.split('```json')[1].split('```')[0].strip()
+            elif '```' in response_text:
+                response_text = response_text.split('```')[1].split('```')[0].strip()
+            
+            metadata = json.loads(response_text)
+            
+            # Get page count if file_path provided
+            page_count = None
+            file_size = None
+            if file_path and os.path.exists(file_path):
+                try:
+                    import PyPDF2
+                    with open(file_path, 'rb') as f:
+                        pdf_reader = PyPDF2.PdfReader(f)
+                        page_count = len(pdf_reader.pages)
+                    file_size = os.path.getsize(file_path)
+                except Exception as e:
+                    print(f"⚠️  Could not read PDF metadata: {e}")
+            
+            # Add file metadata
+            metadata['pageCount'] = page_count
+            metadata['fileSize'] = f"{file_size // 1024} KB" if file_size else "Unknown"
+            metadata['uploadDate'] = datetime.now().strftime("%Y-%m-%d")
+            
+            print(f"✅ Metadata extraction complete")
+            return metadata
+            
+        except json.JSONDecodeError as e:
+            print(f"⚠️  Warning: Could not parse metadata JSON: {e}")
+            # Return default metadata structure
+            return {
+                "fileName": "Unknown Document",
+                "documentType": "Lease Agreement",
+                "parties": {
+                    "landlord": "Not specified",
+                    "tenant": "Not specified",
+                    "property": "Not specified"
+                },
+                "leaseDetails": {
+                    "leaseType": "Unknown",
+                    "propertyAddress": "Not specified",
+                    "leaseTerm": "Not specified",
+                    "monthlyRent": "Not specified",
+                    "securityDeposit": "Not specified",
+                    "specialClauses": []
+                },
+                "pageCount": None,
+                "fileSize": "Unknown",
+                "uploadDate": datetime.now().strftime("%Y-%m-%d")
+            }
+        except Exception as e:
+            print(f"⚠️  Metadata extraction error: {e}")
+            raise
     
     def search_relevant_laws(self, text: str, top_k: int = 10) -> List[Dict]:
         """
@@ -129,7 +233,7 @@ Provide a detailed analysis in JSON format with the following structure:
 {{
     "illegal_clauses": [
         {{
-            "clause": "exact text from lease",
+            "clause": "EXACT VERBATIM text copied word-for-word from the lease above, including all punctuation",
             "violation": "which law/statute it violates",
             "explanation": "why this is illegal",
             "severity": "high/critical",
@@ -139,7 +243,7 @@ Provide a detailed analysis in JSON format with the following structure:
     ],
     "risky_terms": [
         {{
-            "term": "exact text from lease",
+            "term": "EXACT VERBATIM text copied word-for-word from the lease above, including all punctuation",
             "risk": "potential legal issue",
             "explanation": "why this could be problematic",
             "severity": "medium/high"
@@ -147,7 +251,7 @@ Provide a detailed analysis in JSON format with the following structure:
     ],
     "favorable_clauses": [
         {{
-            "clause": "exact text from lease",
+            "clause": "EXACT VERBATIM text copied word-for-word from the lease above, including all punctuation",
             "benefit": "how this protects the tenant",
             "relevant_law": "supporting statute if any"
         }}
@@ -159,6 +263,13 @@ Provide a detailed analysis in JSON format with the following structure:
         }}
     ]
 }}
+
+CRITICAL INSTRUCTIONS FOR TEXT EXTRACTION:
+- For the "clause", "term", and "clause" fields, you MUST copy the EXACT text as it appears in the lease above
+- Do NOT paraphrase, summarize, or reword the text in any way
+- Copy the text VERBATIM, character by character, including all punctuation, capitalization, and spacing
+- Include complete sentences or paragraphs that contain the problematic language
+- The text you provide will be used to locate the clause in the PDF, so precision is essential
 
 Be thorough and cite specific statutes. If a clause is found in the lease that violates MA law, mark it as illegal.
 
@@ -204,8 +315,24 @@ Return ONLY valid JSON, no additional text."""
                 "concerns": [{"issue": "Analysis parsing error", "recommendation": "Manual review recommended"}]
             }
     
-    def consolidate_analysis(self, chunk_analyses: List[Dict], full_lease_text: str) -> Dict:
-        """Consolidate analyses from multiple chunks into a final report"""
+    def consolidate_analysis(self, chunk_analyses: List[Dict], full_lease_text: str, 
+                           metadata: Dict = None, pii_summary: Dict = None, file_id: str = None, 
+                           pdf_path: str = None) -> Dict:
+        """
+        Consolidate analyses from multiple chunks into a final report with complete structure
+        
+        Args:
+            chunk_analyses: List of analyses from each chunk
+            full_lease_text: Full text of the lease
+            metadata: Extracted metadata (optional, for enhanced output)
+            pii_summary: PII redaction summary (optional)
+            file_id: Document ID (optional)
+            pdf_path: Path to PDF file for coordinate extraction (optional)
+            
+        Returns:
+            Complete analysis in the required JSON format
+        """
+        print("📊 Consolidating analysis...")
         
         # Merge all findings
         all_illegal = []
@@ -219,7 +346,7 @@ Return ONLY valid JSON, no additional text."""
             all_favorable.extend(analysis.get('favorable_clauses', []))
             all_concerns.extend(analysis.get('concerns', []))
         
-        # Calculate power imbalance score
+        # Calculate metrics
         illegal_count = len(all_illegal)
         risky_count = len(all_risky)
         favorable_count = len(all_favorable)
@@ -227,7 +354,7 @@ Return ONLY valid JSON, no additional text."""
         power_imbalance = min(100, (illegal_count * 20) + (risky_count * 10) - (favorable_count * 5))
         power_imbalance = max(0, power_imbalance)
         
-        # Calculate potential recovery from AI-provided estimates
+        # Calculate potential recovery
         potential_recovery = 0
         recovery_breakdown = []
         
@@ -262,16 +389,223 @@ Return ONLY valid JSON, no additional text."""
         
         severity_level = self._get_severity_level(power_imbalance, illegal_count)
         
+        # Determine risk level
+        if illegal_count >= 3:
+            risk_level = "Critical"
+        elif illegal_count >= 1:
+            risk_level = "High"
+        elif risky_count >= 5:
+            risk_level = "Medium"
+        else:
+            risk_level = "Low"
+        
+        # If enhanced output requested (metadata provided)
+        if metadata and file_id and pdf_path:
+            print("   Creating highlights with PDF coordinates...")
+            
+            # Create highlights with PDF coordinates
+            highlights = self._create_highlights_with_coordinates(
+                all_illegal, all_risky, all_favorable, pdf_path
+            )
+            
+            # Get top issues
+            top_issues = []
+            for i, illegal in enumerate(all_illegal[:3]):
+                top_issues.append({
+                    "title": illegal.get('violation', 'Unknown Violation'),
+                    "severity": illegal.get('severity', 'high'),
+                    "amount": f"${recovery_breakdown[i]['amount']}" if i < len(recovery_breakdown) else "$0"
+                })
+            
+            # Build complete JSON structure
+            return {
+                "documentId": file_id,
+                "pdfUrl": f"/{os.path.basename(pdf_path)}" if pdf_path else "/document.pdf",
+                "documentMetadata": {
+                    "fileName": metadata.get('fileName', 'Unknown Document'),
+                    "uploadDate": metadata.get('uploadDate', datetime.now().strftime("%Y-%m-%d")),
+                    "fileSize": metadata.get('fileSize', 'Unknown'),
+                    "pageCount": metadata.get('pageCount', 0),
+                    "documentType": metadata.get('documentType', 'Lease Agreement'),
+                    "parties": metadata.get('parties', {
+                        "landlord": "Not specified",
+                        "tenant": "Not specified",
+                        "property": "Not specified"
+                    })
+                },
+                "deidentificationSummary": {
+                    "itemsRedacted": pii_summary.get('total_redactions', 0) if pii_summary else 0,
+                    "categories": pii_summary.get('redaction_details', []) if pii_summary else []
+                },
+                "keyDetailsDetected": {
+                    "leaseType": metadata.get('leaseDetails', {}).get('leaseType', 'Unknown'),
+                    "propertyAddress": metadata.get('leaseDetails', {}).get('propertyAddress', 'Not specified'),
+                    "landlord": metadata.get('parties', {}).get('landlord', 'Not specified'),
+                    "leaseTerm": metadata.get('leaseDetails', {}).get('leaseTerm', 'Not specified'),
+                    "monthlyRent": metadata.get('leaseDetails', {}).get('monthlyRent', 'Not specified'),
+                    "securityDeposit": metadata.get('leaseDetails', {}).get('securityDeposit', 'Not specified'),
+                    "specialClauses": metadata.get('leaseDetails', {}).get('specialClauses', [])
+                },
+                "analysisSummary": {
+                    "status": "complete",
+                    "summaryText": f"Analysis Complete — {illegal_count} key issues found. " + 
+                                  self._generate_summary(illegal_count, risky_count, favorable_count, power_imbalance),
+                    "overallRisk": risk_level,
+                    "issuesFound": illegal_count,
+                    "potential_recovery": potential_recovery,
+                    "estimatedRecovery": f"${potential_recovery:,}",
+                    "topIssues": top_issues
+                },
+                "highlights": highlights,
+                "document_info": {
+                    'total_characters': len(full_lease_text),
+                    'total_chunks': len(chunk_analyses),
+                    'analysis_date': datetime.now().isoformat()
+                }
+            }
+        else:
+            # Legacy format (backward compatibility)
+            return {
+                "illegal_clauses": all_illegal,
+                "risky_terms": all_risky,
+                "favorable_clauses": all_favorable,
+                "concerns": all_concerns,
+                "power_imbalance_score": power_imbalance,
+                "potential_recovery_amount": potential_recovery,
+                "recovery_breakdown": recovery_breakdown,
+                "severity_level": severity_level,
+                "summary": self._generate_summary(illegal_count, risky_count, favorable_count, power_imbalance)
+            }
+    
+    def _create_highlights_with_coordinates(self, illegal_clauses: List[Dict], 
+                                           risky_terms: List[Dict], 
+                                           favorable_clauses: List[Dict],
+                                           pdf_path: str) -> List[Dict]:
+        """
+        Create highlights array with PDF coordinates
+        
+        Args:
+            illegal_clauses: List of illegal clauses
+            risky_terms: List of risky terms
+            favorable_clauses: List of favorable clauses
+            pdf_path: Path to PDF file
+            
+        Returns:
+            List of highlight objects with coordinates
+        """
+        highlights = []
+        highlight_id = 1
+        
+        # Initialize PDF coordinate extractor
+        try:
+            from pdf_coordinate_extractor import PDFCoordinateExtractor
+            coord_extractor = PDFCoordinateExtractor(pdf_path)
+        except Exception as e:
+            print(f"⚠️  Could not initialize coordinate extractor: {e}")
+            coord_extractor = None
+        
+        # Add illegal clauses (red highlights)
+        for illegal in illegal_clauses:
+            text = illegal.get('clause', '')
+            
+            # Get coordinates
+            if coord_extractor:
+                position = coord_extractor.find_text_coordinates(text)
+            else:
+                position = self._get_default_position(1)
+            
+            highlights.append({
+                "id": f"hl-{highlight_id:03d}",
+                "pageNumber": position['boundingRect']['pageNumber'],
+                "color": "red",
+                "priority": 1,
+                "category": illegal.get('violation', 'Legal Violation'),
+                "text": text,
+                "statute": illegal.get('violation', ''),
+                "explanation": illegal.get('explanation', ''),
+                "damages_estimate": self._parse_amount(illegal.get('potential_recovery', '0')),
+                "position": position
+            })
+            highlight_id += 1
+        
+        # Add risky terms (orange/yellow highlights)
+        for risky in risky_terms:
+            text = risky.get('term', '')
+            severity = risky.get('severity', 'medium')
+            
+            if coord_extractor:
+                position = coord_extractor.find_text_coordinates(text)
+            else:
+                position = self._get_default_position(1)
+            
+            highlights.append({
+                "id": f"hl-{highlight_id:03d}",
+                "pageNumber": position['boundingRect']['pageNumber'],
+                "color": "orange" if severity == "high" else "yellow",
+                "priority": 2 if severity == "high" else 3,
+                "category": risky.get('risk', 'Risky Term'),
+                "text": text,
+                "statute": "M.G.L. c. 186",
+                "explanation": risky.get('explanation', ''),
+                "damages_estimate": 0,
+                "position": position
+            })
+            highlight_id += 1
+        
+        # Add favorable clauses (green highlights)
+        for favorable in favorable_clauses:
+            text = favorable.get('clause', '')
+            
+            if coord_extractor:
+                position = coord_extractor.find_text_coordinates(text)
+            else:
+                position = self._get_default_position(1)
+            
+            highlights.append({
+                "id": f"hl-{highlight_id:03d}",
+                "pageNumber": position['boundingRect']['pageNumber'],
+                "color": "green",
+                "priority": 3,
+                "category": favorable.get('benefit', 'Favorable Clause'),
+                "text": text,
+                "statute": favorable.get('relevant_law', ''),
+                "explanation": favorable.get('benefit', ''),
+                "damages_estimate": 0,
+                "position": position
+            })
+            highlight_id += 1
+        
+        if coord_extractor:
+            coord_extractor.close()
+        
+        return highlights
+    
+    def _parse_amount(self, amount_str: str) -> int:
+        """Parse dollar amount from string"""
+        match = re.search(r'\$?(\d{1,3}(?:,?\d{3})*)', str(amount_str))
+        if match:
+            return int(match.group(1).replace(',', ''))
+        return 0
+    
+    def _get_default_position(self, page_num: int) -> Dict:
+        """Get default position when coordinates cannot be extracted"""
         return {
-            "illegal_clauses": all_illegal,
-            "risky_terms": all_risky,
-            "favorable_clauses": all_favorable,
-            "concerns": all_concerns,
-            "power_imbalance_score": power_imbalance,
-            "potential_recovery_amount": potential_recovery,
-            "recovery_breakdown": recovery_breakdown,
-            "severity_level": severity_level,
-            "summary": self._generate_summary(illegal_count, risky_count, favorable_count, power_imbalance)
+            "boundingRect": {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": page_num
+            },
+            "rects": [
+                {
+                    "x1": 72,
+                    "y1": 200,
+                    "x2": 540,
+                    "y2": 250,
+                    "pageNumber": page_num
+                }
+            ]
         }
     
     def _get_severity_level(self, power_score: int, illegal_count: int) -> str:
@@ -345,4 +679,6 @@ Provide a clear, accurate answer with citations to specific statutes."""
         self.cursor.close()
         self.conn.close()
         print("\n✓ Disconnected from Snowflake")
+
+
 

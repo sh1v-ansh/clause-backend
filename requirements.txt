@@ -8,6 +8,7 @@ numpy
 
 # PDF processing
 PyPDF2
+pdfplumber
 
 # Web framework
 fastapi

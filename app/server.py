@@ -4,7 +4,7 @@ Main server file that combines API and static file serving
 import uvicorn
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from api import app
+from api_v2 import app
 import os
 
 # Mount static files directory

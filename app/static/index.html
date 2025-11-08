@@ -107,6 +107,10 @@
             transform: none;
         }
 
+        .btn-secondary {
+            background: #6c757d;
+        }
+
         .progress-container {
             display: none;
             margin-top: 20px;
@@ -136,6 +140,69 @@
             text-align: center;
             color: #666;
             font-size: 0.9em;
+        }
+
+        /* Metadata Form Styles */
+        .metadata-container {
+            display: none;
+        }
+
+        .metadata-form {
+            background: #f8f9ff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .form-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .form-section h3 {
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+            margin-top: 25px;
         }
 
         .results-container {
@@ -205,48 +272,113 @@
             padding-bottom: 10px;
         }
 
-        .violation-item {
+        .highlight-item {
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+
+        .highlight-item.red {
             background: #fff5f5;
-            border-left: 4px solid #ff4444;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 8px;
+            border-left-color: #ff4444;
         }
 
-        .risk-item {
+        .highlight-item.orange {
             background: #fff8e1;
-            border-left: 4px solid #ff9800;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 8px;
+            border-left-color: #ff9800;
         }
 
-        .favorable-item {
+        .highlight-item.yellow {
+            background: #fffef0;
+            border-left-color: #ffc107;
+        }
+
+        .highlight-item.green {
             background: #f1f8f4;
-            border-left: 4px solid #4caf50;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 8px;
+            border-left-color: #4caf50;
         }
 
-        .item-title {
+        .highlight-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+        }
+
+        .highlight-category {
             font-weight: bold;
-            margin-bottom: 10px;
             color: #333;
+            font-size: 1.1em;
         }
 
-        .item-content {
+        .highlight-page {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+        }
+
+        .highlight-text {
             color: #666;
             line-height: 1.6;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            font-style: italic;
+            border-left: 2px solid rgba(0, 0, 0, 0.1);
+            padding-left: 12px;
         }
 
-        .item-recovery {
+        .highlight-explanation {
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .highlight-statute {
             background: rgba(0, 0, 0, 0.05);
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .highlight-damages {
+            background: #e8f5e9;
             padding: 10px;
             border-radius: 4px;
             margin-top: 10px;
-            font-size: 0.9em;
+            font-weight: 600;
+            color: #2e7d32;
+        }
+
+        .metadata-display {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .metadata-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .metadata-item {
+            padding: 12px;
+            background: white;
+            border-radius: 6px;
+        }
+
+        .metadata-label {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 0.85em;
+            margin-bottom: 5px;
+        }
+
+        .metadata-value {
+            color: #333;
         }
 
         .chat-container {
@@ -318,34 +450,6 @@
             100% { transform: rotate(360deg); }
         }
 
-        .no-results {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-        }
-
-        .recovery-breakdown {
-            background: #f8f9ff;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-
-        .recovery-item {
-            padding: 10px 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .recovery-item:last-child {
-            border-bottom: none;
-        }
-
-        .recovery-amount {
-            font-weight: bold;
-            color: #667eea;
-            font-size: 1.1em;
-        }
-
         .tabs {
             display: flex;
             gap: 10px;
@@ -387,7 +491,7 @@
         </div>
 
         <!-- Upload Section -->
-        <div class="card">
+        <div class="card" id="uploadCard">
             <h2>Upload Lease Document</h2>
             <div class="upload-area" id="uploadArea">
                 <div class="upload-icon">📄</div>
@@ -402,6 +506,80 @@
                 </div>
                 <div class="progress-text" id="progressText">Uploading...</div>
             </div>
+        </div>
+
+        <!-- Metadata Collection Form (Hidden - bypassed) -->
+        <div class="card metadata-container" id="metadataContainer" style="display: none;">
+            <h2>📋 Document Metadata</h2>
+            <p style="color: #666; margin-bottom: 20px;">
+                Please review and complete the extracted metadata below before proceeding with the full analysis.
+            </p>
+            
+            <form id="metadataForm" class="metadata-form">
+                <div class="form-section">
+                    <h3>Basic Information</h3>
+                    <div class="form-group">
+                        <label for="fileName">Document Name</label>
+                        <input type="text" id="fileName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="documentType">Document Type</label>
+                        <input type="text" id="documentType" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Parties</h3>
+                    <div class="form-group">
+                        <label for="landlord">Landlord</label>
+                        <input type="text" id="landlord" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tenant">Tenant</label>
+                        <input type="text" id="tenant" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="property">Property Address</label>
+                        <input type="text" id="property" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Lease Details</h3>
+                    <div class="form-group">
+                        <label for="leaseType">Lease Type</label>
+                        <select id="leaseType" style="width: 100%; padding: 10px; border: 2px solid #e0e0e0; border-radius: 6px;">
+                            <option value="Commercial">Commercial</option>
+                            <option value="Residential">Residential</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="propertyAddress">Property Address (Full)</label>
+                        <input type="text" id="propertyAddress" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="leaseTerm">Lease Term</label>
+                        <input type="text" id="leaseTerm" placeholder="e.g., 12 months, 3 years with renewal option" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="monthlyRent">Monthly Rent</label>
+                        <input type="text" id="monthlyRent" placeholder="e.g., $2,500 or Variable" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="securityDeposit">Security Deposit</label>
+                        <input type="text" id="securityDeposit" placeholder="e.g., $5,000 or Not specified" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="specialClauses">Special Clauses (one per line)</label>
+                        <textarea id="specialClauses" placeholder="e.g., AS-IS condition&#10;Broad indemnification&#10;Assignment restrictions"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="skipMetadata">Skip & Use Extracted</button>
+                    <button type="submit" class="btn">Confirm & Analyze</button>
+                </div>
+            </form>
         </div>
 
         <!-- Results Section -->
@@ -433,6 +611,7 @@
         const API_URL = 'http://localhost:8000';
         let currentFileId = null;
         let pollInterval = null;
+        let extractedMetadata = null;
 
         // Upload area handlers
         const uploadArea = document.getElementById('uploadArea');
@@ -440,6 +619,7 @@
         const progressContainer = document.getElementById('progressContainer');
         const progressFill = document.getElementById('progressFill');
         const progressText = document.getElementById('progressText');
+        const metadataContainer = document.getElementById('metadataContainer');
         const resultsContainer = document.getElementById('resultsContainer');
         const resultsContent = document.getElementById('resultsContent');
         const chatInput = document.getElementById('chatInput');
@@ -480,6 +660,7 @@
             }
 
             progressContainer.style.display = 'block';
+            metadataContainer.style.display = 'none';
             resultsContainer.style.display = 'none';
             updateProgress(0, 'Uploading PDF...');
 
@@ -497,7 +678,7 @@
                 
                 updateProgress(20, 'Upload complete. Starting analysis...');
                 
-                // Start analysis
+                // Start full analysis directly (bypass metadata form)
                 await startAnalysis(currentFileId);
                 
             } catch (error) {
@@ -507,7 +688,7 @@
             }
         }
 
-        // Start analysis
+        // Start analysis directly (bypass metadata form)
         async function startAnalysis(fileId) {
             try {
                 const response = await fetch(`${API_URL}/analyze`, {
@@ -518,7 +699,7 @@
 
                 const data = await response.json();
                 
-                // Start polling for status
+                // Start polling for analysis status
                 pollAnalysisStatus(fileId);
                 
             } catch (error) {
@@ -581,106 +762,147 @@
             }
         }
 
-        // Display results
+        // Display results with enhanced structure
         function displayResults(analysis) {
-            const severityClass = `severity-${analysis.severity_level.toLowerCase()}`;
+            let html = '';
             
-            let html = `
-                <div class="${severityClass} severity-badge">
-                    SEVERITY: ${analysis.severity_level}
-                </div>
-
-                <div class="score-grid">
-                    <div class="score-card">
-                        <div class="score-value">${analysis.power_imbalance_score}/100</div>
-                        <div class="score-label">Power Imbalance</div>
-                    </div>
-                    <div class="score-card">
-                        <div class="score-value">$${analysis.potential_recovery_amount.toLocaleString()}</div>
-                        <div class="score-label">Potential Recovery</div>
-                    </div>
-                    <div class="score-card">
-                        <div class="score-value">${analysis.illegal_clauses.length}</div>
-                        <div class="score-label">Illegal Clauses</div>
-                    </div>
-                    <div class="score-card">
-                        <div class="score-value">${analysis.risky_terms.length}</div>
-                        <div class="score-label">Risky Terms</div>
-                    </div>
-                </div>
-
-                <p><strong>Summary:</strong> ${analysis.summary}</p>
-            `;
-
-            // Recovery Breakdown
-            if (analysis.recovery_breakdown && analysis.recovery_breakdown.length > 0) {
-                html += '<div class="section-title">💰 Potential Recovery Breakdown</div>';
-                html += '<div class="recovery-breakdown">';
+            // Document Metadata
+            if (analysis.documentMetadata) {
+                html += '<div class="section-title">📄 Document Information</div>';
+                html += '<div class="metadata-display">';
+                html += '<div class="metadata-grid">';
                 
-                analysis.recovery_breakdown.forEach(item => {
-                    html += `
-                        <div class="recovery-item">
-                            <div class="recovery-amount">$${item.amount.toLocaleString()}</div>
-                            <div><strong>${item.violation}</strong></div>
-                            <div style="margin-top: 8px; color: #666; font-size: 0.9em;">
-                                ${item.calculation}
-                            </div>
-                        </div>
-                    `;
-                });
+                const meta = analysis.documentMetadata;
+                html += `
+                    <div class="metadata-item">
+                        <div class="metadata-label">File Name</div>
+                        <div class="metadata-value">${meta.fileName}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Document Type</div>
+                        <div class="metadata-value">${meta.documentType}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Upload Date</div>
+                        <div class="metadata-value">${meta.uploadDate}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">File Size</div>
+                        <div class="metadata-value">${meta.fileSize}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Pages</div>
+                        <div class="metadata-value">${meta.pageCount}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Landlord</div>
+                        <div class="metadata-value">${meta.parties.landlord}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Tenant</div>
+                        <div class="metadata-value">${meta.parties.tenant}</div>
+                    </div>
+                    <div class="metadata-item">
+                        <div class="metadata-label">Property</div>
+                        <div class="metadata-value">${meta.parties.property}</div>
+                    </div>
+                `;
                 
-                html += '</div>';
+                html += '</div></div>';
             }
+            
+            // Analysis Summary
+            if (analysis.analysisSummary) {
+                const summary = analysis.analysisSummary;
+                const severityClass = `severity-${summary.overallRisk.toLowerCase()}`;
+                
+                html += `
+                    <div class="${severityClass} severity-badge">
+                        RISK LEVEL: ${summary.overallRisk.toUpperCase()}
+                    </div>
 
-            // Illegal Clauses
-            if (analysis.illegal_clauses.length > 0) {
-                html += '<div class="section-title">🔴 Illegal Clauses</div>';
-                analysis.illegal_clauses.forEach(item => {
-                    html += `
-                        <div class="violation-item">
-                            <div class="item-title">Violation: ${item.violation}</div>
-                            <div class="item-content"><strong>Clause:</strong> ${item.clause.substring(0, 200)}...</div>
-                            <div class="item-content"><strong>Explanation:</strong> ${item.explanation}</div>
-                            ${item.potential_recovery ? `
-                                <div class="item-recovery">
-                                    <strong>💰 Potential Recovery:</strong> ${item.potential_recovery}<br>
-                                    <strong>Calculation:</strong> ${item.recovery_calculation}
-                                </div>
-                            ` : ''}
+                    <div class="score-grid">
+                        <div class="score-card">
+                            <div class="score-value">${summary.issuesFound}</div>
+                            <div class="score-label">Issues Found</div>
                         </div>
-                    `;
-                });
+                        <div class="score-card">
+                            <div class="score-value">${summary.estimatedRecovery}</div>
+                            <div class="score-label">Potential Recovery</div>
+                        </div>
+                        <div class="score-card">
+                            <div class="score-value">${analysis.highlights?.filter(h => h.color === 'red').length || 0}</div>
+                            <div class="score-label">Illegal Clauses</div>
+                        </div>
+                        <div class="score-card">
+                            <div class="score-value">${analysis.highlights?.filter(h => h.color === 'orange' || h.color === 'yellow').length || 0}</div>
+                            <div class="score-label">Risky Terms</div>
+                        </div>
+                    </div>
+
+                    <p style="margin-bottom: 30px;"><strong>Summary:</strong> ${summary.summaryText}</p>
+                `;
             }
-
-            // Risky Terms
-            if (analysis.risky_terms.length > 0) {
-                html += '<div class="section-title">⚠️ Risky Terms</div>';
-                analysis.risky_terms.forEach(item => {
-                    html += `
-                        <div class="risk-item">
-                            <div class="item-title">Risk: ${item.risk}</div>
-                            <div class="item-content"><strong>Term:</strong> ${item.term.substring(0, 200)}...</div>
-                            <div class="item-content"><strong>Explanation:</strong> ${item.explanation}</div>
-                        </div>
-                    `;
-                });
-            }
-
-            // Favorable Clauses
-            if (analysis.favorable_clauses.length > 0) {
-                html += '<div class="section-title">✅ Favorable Clauses</div>';
-                analysis.favorable_clauses.forEach(item => {
-                    html += `
-                        <div class="favorable-item">
-                            <div class="item-title">Benefit: ${item.benefit}</div>
-                            <div class="item-content"><strong>Clause:</strong> ${item.clause.substring(0, 200)}...</div>
-                            ${item.relevant_law ? `<div class="item-content"><strong>Supported by:</strong> ${item.relevant_law}</div>` : ''}
-                        </div>
-                    `;
-                });
+            
+            // Highlights with proper color coding
+            if (analysis.highlights && analysis.highlights.length > 0) {
+                html += '<div class="section-title">🔍 Document Highlights</div>';
+                
+                // Group by color
+                const redHighlights = analysis.highlights.filter(h => h.color === 'red');
+                const orangeHighlights = analysis.highlights.filter(h => h.color === 'orange');
+                const yellowHighlights = analysis.highlights.filter(h => h.color === 'yellow');
+                const greenHighlights = analysis.highlights.filter(h => h.color === 'green');
+                
+                // Display red (illegal clauses) first
+                if (redHighlights.length > 0) {
+                    html += '<h3 style="color: #ff4444; margin-top: 20px;">🔴 Illegal Clauses</h3>';
+                    redHighlights.forEach(highlight => {
+                        html += renderHighlight(highlight);
+                    });
+                }
+                
+                // Orange (high risk)
+                if (orangeHighlights.length > 0) {
+                    html += '<h3 style="color: #ff9800; margin-top: 20px;">🟠 High Risk Terms</h3>';
+                    orangeHighlights.forEach(highlight => {
+                        html += renderHighlight(highlight);
+                    });
+                }
+                
+                // Yellow (medium risk)
+                if (yellowHighlights.length > 0) {
+                    html += '<h3 style="color: #ffc107; margin-top: 20px;">🟡 Medium Risk Terms</h3>';
+                    yellowHighlights.forEach(highlight => {
+                        html += renderHighlight(highlight);
+                    });
+                }
+                
+                // Green (favorable)
+                if (greenHighlights.length > 0) {
+                    html += '<h3 style="color: #4caf50; margin-top: 20px;">🟢 Favorable Clauses</h3>';
+                    greenHighlights.forEach(highlight => {
+                        html += renderHighlight(highlight);
+                    });
+                }
             }
 
             resultsContent.innerHTML = html;
+        }
+
+        function renderHighlight(highlight) {
+            return `
+                <div class="highlight-item ${highlight.color}">
+                    <div class="highlight-header">
+                        <div class="highlight-category">${highlight.category}</div>
+                        <div class="highlight-page">Page ${highlight.pageNumber}</div>
+                    </div>
+                    <div class="highlight-text">"${highlight.text.substring(0, 300)}${highlight.text.length > 300 ? '...' : ''}"</div>
+                    <div class="highlight-explanation">${highlight.explanation}</div>
+                    ${highlight.statute ? `<div class="highlight-statute">📜 ${highlight.statute}</div>` : ''}
+                    ${highlight.damages_estimate > 0 ? `<div class="highlight-damages">💰 Estimated Damages: $${highlight.damages_estimate.toLocaleString()}</div>` : ''}
+                </div>
+            `;
         }
 
         // Chat functionality
@@ -743,4 +965,3 @@
     </script>
 </body>
 </html>
-

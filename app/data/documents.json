@@ -258,5 +258,2771 @@
       "person_name": 14,
       "organization": 35
     }
+  },
+  "060f8154-1636-42ce-a1f3-511d5991e11e": {
+    "file_id": "060f8154-1636-42ce-a1f3-511d5991e11e",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/060f8154-1636-42ce-a1f3-511d5991e11e.pdf",
+    "redacted_text_path": "uploads/060f8154-1636-42ce-a1f3-511d5991e11e_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T13:38:12.035796",
+    "status": "completed",
+    "progress": 100,
+    "message": "Analysis complete",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 12,
+      "organization": 36
+    },
+    "metadata": {
+      "documentType": "Commercial Lease Agreement",
+      "parties": {
+        "landlord": "Town of Swampscott",
+        "tenant": "[REDACTED]",
+        "property": "16 New Ocean Street, Swampscott, MA"
+      },
+      "leaseDetails": {
+        "leaseType": "Commercial",
+        "leaseTerm": "12 months with options",
+        "monthlyRent": "Variable",
+        "securityDeposit": "Not specified"
+      },
+      "pageCount": 16
+    },
+    "missing_fields": [
+      "tenant",
+      "Commencement Date",
+      "Expiration Date",
+      "Extension Term length",
+      "maximum lease term length",
+      "Annual Rent",
+      "Monthly Rent"
+    ],
+    "analysis": {
+      "documentId": "060f8154-1636-42ce-a1f3-511d5991e11e",
+      "pdfUrl": "/sample-lease.pdf",
+      "documentMetadata": {
+        "fileName": "sample-lease.pdf",
+        "uploadDate": "2025-11-08T13:38:12.035796",
+        "fileSize": "140 KB",
+        "pageCount": 16,
+        "documentType": "Commercial Lease Agreement",
+        "parties": {
+          "landlord": "Town of Swampscott",
+          "tenant": "[REDACTED]",
+          "property": "16 New Ocean Street, Swampscott, MA"
+        }
+      },
+      "deidentificationSummary": {
+        "itemsRedacted": 0,
+        "categories": []
+      },
+      "keyDetailsDetected": {
+        "leaseType": "Commercial",
+        "propertyAddress": "16 New Ocean Street, Swampscott, MA",
+        "landlord": "Town of Swampscott",
+        "leaseTerm": "12 months with options",
+        "monthlyRent": "Variable",
+        "securityDeposit": "Not specified",
+        "specialClauses": [
+          "Chapter 186, Section 15E and Chapter 93A",
+          "Chapter 186, \u00a715",
+          "Chapter 186, Section 15",
+          "Chapter 186, Section 15",
+          "Chapter 186, Section 15"
+        ]
+      },
+      "analysisSummary": {
+        "status": "complete",
+        "summaryText": "Analysis Complete \u2014 5 key issues found. \u26a0\ufe0f  Found 5 illegal clause(s) that violate Massachusetts law | \u26a1 Identified 10 risky term(s) that could be problematic | \u2713 Found 2 tenant-favorable provision(s) | Power Imbalance Score: 100/100 (Concerning)",
+        "overallRisk": "High",
+        "issuesFound": 5,
+        "potential_recovery": 1700,
+        "estimatedRecovery": "$1,700",
+        "topIssues": [
+          {
+            "title": "Chapter 186, Section 15E and Chapter 93A",
+            "severity": "critical",
+            "amount": "$500"
+          },
+          {
+            "title": "Chapter 186, \u00a715",
+            "severity": "critical",
+            "amount": "$500"
+          },
+          {
+            "title": "Chapter 186, Section 15",
+            "severity": "critical",
+            "amount": "$100"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "id": "hl-001",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15E and Chapter 93A",
+          "text": "The [NAME_REDACTED]ses are delivered to [NAME_REDACTED] and [NAME_REDACTED] accepts the [NAME_REDACTED]ses in their present condition, \u201cAS IS,\u201d it being agreed that [NAME_REDACTED] has had a n opportunity to examine and inspect the [NAME_REDACTED]ses in all respects, that [NAME_REDACTED] has made no representations or warranties of any kind with respect thereto, and that [NAME_REDACTED] shall have no obligation to do any work on, or make any improvements to the [NAME_REDACTED] ses or the condition thereof.",
+          "statute": "Chapter 186, Section 15E and Chapter 93A",
+          "explanation": "This clause attempts to waive the landlord's responsibility for defects in common areas that violate the building code at the time of injury, as well as disclaiming any warranties, which is against public policy under MA law. A landlord can be held liable for dangerous conditions, particularly if they violate building codes. An \"AS IS\" clause attempting to waive these responsibilities may violate Chapter 93A if it is deemed unfair or deceptive. While this is likely for a commercial lease, if it were used for a residential lease, it would clearly violate Section 15E and be considered a violation of Chapter 93A.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-002",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, \u00a715",
+          "text": "9.2. Release. To the maximum extent this [NAME_REDACTED]se may be made effective according to law, [NAME_REDACTED] agrees to use and occupy the [NAME_REDACTED]s es at [NAME_REDACTED]'s own risk, and [NAME_REDACTED] shall have no responsibility or liability for any loss or damage to fixtures or other personal property of [NAME_REDACTED] or any person claiming by, through or under [NAME_REDACTED]. Without limitation, [NAME_REDACTED] agrees that [NAME_REDACTED] sha ll not be responsible or liable to [NAME_REDACTED], or those claiming by, through or under [NAME_REDACTED], for any loss or damage resulting to [NAME_REDACTED] or those claiming by, through or under [NAME_REDACTED], its or their property from the breaking, bursting, stopping or leaking of [ORG_REDACTED] and wires, and water, gas or steam pipes.",
+          "statute": "Chapter 186, \u00a715",
+          "explanation": "This clause attempts to exculpate the landlord from liability for damage to the tenant's property, even if caused by the landlord's negligence.  Chapter 186, Section 15 prohibits such exculpatory clauses in leases and deems them against public policy.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-003",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "9.1. Indemnification. [NAME_REDACTED] shall, during the term hereof, assume and maintain exclusive control of the [NAME_REDACTED]ses and defend, indemn ify and save harmless [NAME_REDACTED] from and against all claims, expenses or liability of whatever nature arising from any act, omission or negligence of [NAME_REDACTED], [NAME_REDACTED]'s contractors, agents, employees, customers, and invitees, or anyone claiming by, through or under [NAME_REDACTED], or arising, directly or indirectly, from any accident, injury or damage whatsoever, however caused, to any person, or to the property of any person, occurring after [NAME_REDACTED] enters the [NAME_REDACTED]ses for any reason and until the end of the term of t his [NAME_REDACTED]se and, thereafter, so long as [NAME_REDACTED] or any occupant claiming under [NAME_REDACTED] is in occupancy of any part of the [NAME_REDACTED]ses, in or about the [NAME_REDACTED]ses, or arising from any accident occurring outside the [NAME_REDACTED]ses but within the general area of the [NAME_REDACTED]se s, where such accident, injury or damage results or is claimed to have resulted from any act, omission or negligence on the part of [NAME_REDACTED] or [NAME_REDACTED]'s contractors, agents, employees, customers, and invitees, or anyone claiming by, through or under [NAME_REDACTED].",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause requires the tenant to indemnify the landlord against liability for the landlord's own negligence or misconduct. This is explicitly against public policy and void under Massachusetts law. This clause attempts to hold the landlord harmless from liability resulting from their own acts or omissions.",
+          "damages_estimate": 100,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-004",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "9.2. Release.  To the maximum extent this [NAME_REDACTED]se may be made effective according to law, [NAME_REDACTED] agrees to use and occupy the [NAME_REDACTED]s es at [NAME_REDACTED]'s own risk, and [NAME_REDACTED] shall have no responsibility or liability for any loss or damage to fixtures or other personal property of [NAME_REDACTED] or any person claiming by, through or under [NAME_REDACTED].  Without limitation, [NAME_REDACTED] agrees that [NAME_REDACTED] sha ll not be responsible or liable to [NAME_REDACTED], or those claiming by, through or under [NAME_REDACTED], for any loss or damage resulting to [NAME_REDACTED] or those claiming by, through or under [NAME_REDACTED], its or their property from the breaking, bursting, stopping or leaking of [ORG_REDACTED] and wires, and water, gas or steam pipes.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause releases the landlord from responsibility for any loss or damage to the tenant's property, even if caused by the landlord's negligence. This violates Chapter 186, Section 15, which prohibits lease provisions that exonerate the landlord from liability for their own negligence.",
+          "damages_estimate": 100,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-005",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "10.3. [ORG_REDACTED]. [NAME_REDACTED] hereby waives any and all rights of recovery which it might otherwise have against [NAME_REDACTED], its agents, employees and other persons for whom [NAME_REDACTED] may be responsible for any loss or damage to [NAME_REDACTED]\u2019s property or improvements in the [NAME_REDACTED]ses whi ch are either required to be insured under the terms of this [NAME_REDACTED]se or which [NAME_REDACTED], in the absence of any such requirement, elects to insure, notwithstanding that the loss or damage may result from the negligence, willful act or default under the terms of this [NAME_REDACTED]se by [NAME_REDACTED], its agents, employees, contractors, or other persons for whom [NAME_REDACTED] may be responsible.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause contains a waiver of subrogation, meaning the tenant is waiving the right for their insurance company to recover from the landlord even if the landlord's negligence caused the damage. While some waiver of subrogation clauses may be acceptable in commercial leases under specific circumstances involving mutual insurance requirements, this clause is overly broad and likely violates public policy under Chapter 186, Section 15 as it protects the landlord from their own negligence. It's particularly problematic because it covers 'willful acts', not just negligence.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-006",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Unclear scope of tenant's responsibility for taxes and charges.",
+          "text": "4.3 [ORG_REDACTED]. [NAME_REDACTED] shall be responsible for any and all taxes,  rates, charges, assessments, license fees, municipal liens, levies, excises, water and sewer charges, fees or other charges, whether general or special, or ordinary or extraordinary, of every kind and nature, including governmental or other impositions, c harged, levied, assessed, or imposed, whether by federal, state, local, or any other public authority, during the Term hereof, in relation to the [NAME_REDACTED]ses, [NAME_REDACTED]\u2019s personal property, and/ or [NAME_REDACTED]\u2019s use and operation of the [NAME_REDACTED]ses.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "While it is standard for commercial leases to pass through certain expenses, the broad language could lead to disputes over what specific taxes and charges the tenant is actually responsible for. It's especially concerning if the tenant is a smaller business with limited financial resources.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-007",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Tenant may be responsible for repairs that are the responsibility of the landlord",
+          "text": "6.1. [NAME_REDACTED]\u2019s Responsibility.  [NAME_REDACTED] shall be responsible for maintaining the [NAME_REDACTED]ses in g ood and clean condition and order at its sole expense.  Without limiting the foregoing, [NAME_REDACTED] shall keep the [NAME_REDACTED]ses, including, without limitation, the electrical fixtures, windows, halls, stairwells, lavatories and all other areas of the Building, the landscaping (including, without limitation, keeping the grass neat and cut and trimming of trees and bushes) in good condition, damage by fire or other casualty, and ordinary wear and tear only excepted.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "Tenant has responsibility for the entire building. If a commercial lease, some of this is appropriate, but it's overly broad in making the Tenant responsible for all areas of the building. It shifts the responsibility to the tenant, and some of these would be construed as Landlord responsibilities.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-008",
+          "pageNumber": 3,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Potentially usurious interest rate, depending on the prime rate.",
+          "text": "4.5. Interest. All payments becoming due under this [NAME_REDACTED]se and not paid when due s hall bear interest from the applicable due date until received by [NAME_REDACTED] at an annual rate equal to the prime rate of interest charged from time to time by [ORG_REDACTED] or its successor, plus two percent (2%).",
+          "statute": "M.G.L. c. 186",
+          "explanation": "If the prime rate is high, the interest rate could exceed the maximum legal interest rate allowable in Massachusetts. While there are exceptions for certain types of loans and agreements, this should be reviewed carefully to ensure compliance with usury laws.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72.02,
+              "y1": 426.55,
+              "x2": 129.55,
+              "y2": 437.59,
+              "pageNumber": 3
+            },
+            "rects": [
+              {
+                "x1": 72.02,
+                "y1": 426.55,
+                "x2": 129.55,
+                "y2": 437.59,
+                "pageNumber": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-009",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Tenant pays for capital improvements to Landlord's Property",
+          "text": "7.1. Construction of Improvements.  [NAME_REDACTED] shall obtain the [NAME_REDACTED]'s written approval prior to making any structural alterations or additions to the [NAME_REDACTED]ses.   [NAME_REDACTED] may make non -structural alterations or additions to the [NAME_REDACTED]ses, including paving the unp aved, unlined parking area located around the Building.  All such allowed or required alterations or additions shall be at [NAME_REDACTED]'s sole expense, shall be in accordance with all applicable laws and codes, and shall be in quality at least equal to the prese nt construction.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "Requires Tenant to pay for capital improvements, and that would revert to Landlord's property upon the termination of the lease.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-010",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Landlord's Right to Repair and Charge Tenant",
+          "text": "6.4 [NAME_REDACTED]\u2019s Failure to Maintain. If any maintenance, repair and/or replacements is required to be made by [NAME_REDACTED] pursuant to the terms hereof and [NAME_REDACTED] fails to cure the same within thirty (30) days after no tice by [NAME_REDACTED] (or, in the event of an emergency, with such notice as is practicable), [NAME_REDACTED] shall have the right (but shall not be obligated) to make such repairs, replacements or perform maintenance work or any other work required of [NAME_REDACTED] pursuant to this [NAME_REDACTED]se and charge the cost thereof to [NAME_REDACTED] as [ORG_REDACTED], which, if not paid within thirty (30) days from the presentment of invoices therefore, shall bear interest at the rate set forth herein.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "This clause allows the landlord to charge the tenant for repairs if the tenant fails to make them after notice. While seemingly reasonable, the problem arises if the tenant disagrees with the landlord's assessment that the repair was the tenant's responsibility under the lease. Also the tenant could be charged an unreasonable amount for the repairs. This creates potential disputes over the validity and cost of repairs charged to the tenant, which the Landlord may add to the rent owed by the tenant, and ultimately could be grounds for eviction.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-011",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Alteration Expense",
+          "text": "7.1. Construction of Improvements.  [NAME_REDACTED] shall obtain the [NAME_REDACTED]'s written approval prior to making any structural alterations or additions to the [NAME_REDACTED]ses.   [NAME_REDACTED] may make non -structural alterations or additions to the [NAME_REDACTED]ses, including paving the unp aved, unlined parking area located around the Building.  All such allowed or required alterations or additions shall be at [NAME_REDACTED]'s sole expense, shall be in accordance with all applicable laws and codes, and shall be in quality at least equal to the prese nt construction.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "This clause places the sole expense of all alterations and additions (even those *required* by the landlord) on the Tenant. This is unusually burdensome and could lead to significant unexpected costs for the Tenant. If, for example, state or federal law required a structural alteration to meet safety standards, it's arguable that the landlord would ultimately responsible for these costs and cannot pass them down to the Tenant.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-012",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Unfettered Landlord Discretion on Assignment/Sublease",
+          "text": "8.5 Assignment and Subleasing. [NAME_REDACTED] shall not assign, sublet, underlet, mortgage, pledge or encumber (collectively referred to as '[NAME_REDACTED]') this [NAME_REDACTED]se without [NAME_REDACTED]'s prior written consent, which may be withheld in [NAME_REDACTED]\u2019s sole discretion. Consent by [NAME_REDACTED], whether express or implied, to any [NAME_REDACTED] shall not constitute a waiver o f [NAME_REDACTED]'s right to prohibit any subsequent [NAME_REDACTED]; nor shall such consent be deemed a waiver of [NAME_REDACTED]'s right to terminate this [NAME_REDACTED]se upon any subsequent [NAME_REDACTED]. As used herein, the term 'assign' or 'assignment' shall be deemed to include, witho ut limitation, any transfer of [NAME_REDACTED]'s interest in the [NAME_REDACTED]se by operation of law.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "The clause states the landlord's consent to assignment or subletting may be withheld in the landlord's *sole discretion*. While landlords generally have the right to approve assignments and subleases, some jurisdictions require that consent not be *unreasonably* withheld. Though it's a commercial lease, an argument could be made that this level of discretion is unfair, particularly if the tenant has a good reason for needing to assign or sublet. This may limit the tenant's ability to exit the lease if necessary.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-013",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Overly Broad Indemnification",
+          "text": "9.1. Indemnification. [NAME_REDACTED] shall, during the term hereof, assume and maintain exclusive control of the [NAME_REDACTED]ses and defend, indemn ify and save harmless [NAME_REDACTED] from and against all claims, expenses or liability of whatever nature arising from any act, omission or negligence of [NAME_REDACTED], [NAME_REDACTED]'s contractors, agents, employees, customers, and invitees, or anyone claiming by, through or under [NAME_REDACTED], or arising, directly or indirectly, from any accident, injury or damage whatsoever, however caused, to any person, or to the property of any person, occurring after [NAME_REDACTED] enters the [NAME_REDACTED]ses for any reason and until the end of the term of t his [NAME_REDACTED]se and, thereafter, so long as [NAME_REDACTED] or any occupant claiming under [NAME_REDACTED] is in occupancy of any part of the [NAME_REDACTED]ses, in or about the [NAME_REDACTED]ses, or arising from any accident occurring outside the [NAME_REDACTED]ses but within the general area of the [NAME_REDACTED]se s, where such accident, injury or damage results or is claimed to have resulted from any act, omission or negligence on the part of [NAME_REDACTED] or [NAME_REDACTED]'s contractors, agents, employees, customers, and invitees, or anyone claiming by, through or under [NAME_REDACTED].",
+          "statute": "M.G.L. c. 186",
+          "explanation": "The scope of this indemnification clause appears overly broad. It seems to require the Tenant to indemnify the Landlord even for incidents outside the Tenant's control, and potentially even for the Landlord's own negligence, as long as it occurs within the 'general area of the premises.' This might not be enforceable as written, particularly to the extent it seeks to indemnify the landlord for their own negligence. An overly broad indemnification clause could be challenged under MA law, potentially leading to it being narrowed by a court.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-014",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Unreasonable attorneys' fees demand.",
+          "text": "9.1. Indemnification. The foregoing indemnity and hold harmless agreement shall include indemnity against all costs, expenses and liabilities incurred in or in connection with any such claim or proceeding brought thereon, including attorneys\u2019 fees, and the defense thereof with  counsel acceptable to [NAME_REDACTED] or counsel selected by an insurance company which has accepted liability for any such claim.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "The requirement that the tenant must defend with counsel 'acceptable to [NAME_REDACTED]' gives the landlord excessive control and could force the tenant to pay for very expensive counsel regardless of the claim's merit.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-015",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Unreasonable or Unspecified Insurance Requirements.",
+          "text": "10.1 [NAME_REDACTED]\u2019s Insurance. [NAME_REDACTED] shall obtain and keep in force at its own expense so long as this [NAME_REDACTED]se remains in effect and thereafter so long as [NAME_REDACTED], or anyone claiming by, through or under [NAME_REDACTED], uses or occupies the [NAME_REDACTED]ses or any part thereof, policies of insurance for the benefit of such parties, in the amounts, and in the manner and form se t forth in this Section; provided, however, that amounts of insurance coverage may from time to time be increased.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "The clause states that amounts of coverage may be increased from time to time. Without specifying how this will be determined or limited, the landlord could demand unreasonable increases in coverage. This could become cost prohibitive for the tenant.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-016",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "Requires landlord to give 24-hour notice prior to inspection and not interfere unreasonably with the tenant's use of the property.",
+          "text": "6.3 Inspection.  Without limiting [NAME_REDACTED]\u2019s rights to access the [NAME_REDACTED]ses under other provisions of this [NAME_REDACTED]se, [NAME_REDACTED] hereby specifically reserves the right to conduct an annua l inspection of the [NAME_REDACTED]ses, and [NAME_REDACTED] shall allow entry and access to [ORG_REDACTED], [ORG_REDACTED], and such other persons as the [ORG_REDACTED] may designate, for the purpose of investigating the condition of the of the [NAME_REDACTED]s es.  [NAME_REDACTED] shall provide [NAME_REDACTED] with a minimum notice of twenty -four (24) hours, and not interfere unreasonably with [NAME_REDACTED]\u2019s use of the [NAME_REDACTED]ses.",
+          "statute": "Chapter 186, Section 15B(1)(a) requires reasonable notice and prohibits unreasonable interference with tenant's quiet enjoyment.",
+          "explanation": "Requires landlord to give 24-hour notice prior to inspection and not interfere unreasonably with the tenant's use of the property.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-017",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "Allows the tenant to terminate the lease if the premises are damaged or taken and the damage significantly interferes with the intended use.",
+          "text": "(b) If the [NAME_REDACTED]ses or any portion thereof shall be destroyed or damaged by fire or other casualty, or taken by any public or quasi -public agency or authority other than [NAME_REDACTED] by right of eminent domain, and the casualty/taking unreasonably interferes with the use of the [NAME_REDACTED]ses for the Permitted Uses in a manner comparable to such use prior to such casualty/condemnation, this [NAME_REDACTED] se shall terminate at the election of either [NAME_REDACTED] or [NAME_REDACTED].  Any such termination shall be effective thirty (30) days after the date of notice thereof.",
+          "statute": null,
+          "explanation": "Allows the tenant to terminate the lease if the premises are damaged or taken and the damage significantly interferes with the intended use.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        }
+      ],
+      "document_info": {
+        "total_characters": 43867,
+        "total_chunks": 4,
+        "analysis_date": "2025-11-08T13:39:21.710789"
+      }
+    },
+    "analyzed_at": "2025-11-08T13:39:21.786947"
+  },
+  "9f7ae613-fd6b-4c95-b3df-0b34823ea22f": {
+    "file_id": "9f7ae613-fd6b-4c95-b3df-0b34823ea22f",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/9f7ae613-fd6b-4c95-b3df-0b34823ea22f.pdf",
+    "redacted_text_path": "uploads/9f7ae613-fd6b-4c95-b3df-0b34823ea22f_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:14:49.186775",
+    "status": "awaiting_metadata",
+    "progress": 0,
+    "message": "Please provide missing document information",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 12,
+      "organization": 36
+    },
+    "metadata": {
+      "documentType": "Lease Agreement",
+      "parties": {
+        "landlord": "TOWN OF SWAMPSCOTT",
+        "tenant": "Not specified",
+        "property": "[ADDRESS_REDACTED], Swampscott, Massachusetts"
+      },
+      "leaseDetails": {
+        "leaseType": "Commercial",
+        "leaseTerm": "This [NAME_REDACTED]se shall commence on __________________ , 2019 (the \u201cCommencement Date\u201d) and expire on \n__________________, 20__ (the \u201c[ORG_REDACTED]\u201d), with [NAME_REDACTED] having the right to extend the term of the \n[NAME_REDACTED]se for a ________ (__) year term (the \u201cExtension Term\u201d), for a total maximum term of \n________________ (_ ___) years",
+        "monthlyRent": "__________________ _______ Dollars ($_____) per month",
+        "securityDeposit": "Not specified"
+      },
+      "missing_fields": [
+        "tenant",
+        "leaseDetails.monthlyRent",
+        "leaseDetails.leaseTerm"
+      ],
+      "pageCount": 16
+    },
+    "missing_fields": [
+      "tenant",
+      "leaseDetails.monthlyRent",
+      "leaseDetails.leaseTerm"
+    ]
+  },
+  "0033bb6a-2d27-4ffd-ae17-0f4bec0a2395": {
+    "file_id": "0033bb6a-2d27-4ffd-ae17-0f4bec0a2395",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/0033bb6a-2d27-4ffd-ae17-0f4bec0a2395.pdf",
+    "redacted_text_path": "uploads/0033bb6a-2d27-4ffd-ae17-0f4bec0a2395_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:16:35.987358",
+    "status": "completed",
+    "progress": 100,
+    "message": "Analysis complete",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 12,
+      "organization": 36
+    },
+    "metadata": {
+      "fileName": "Test Lease",
+      "documentType": "Commercial Lease",
+      "parties": {
+        "landlord": "Town of Swampscott",
+        "tenant": "Test Tenant",
+        "property": "16 New Ocean Street"
+      },
+      "leaseDetails": {
+        "leaseType": "Commercial",
+        "propertyAddress": "16 New Ocean Street, Swampscott, MA",
+        "leaseTerm": "12 months",
+        "monthlyRent": "$2500",
+        "securityDeposit": "$5000"
+      }
+    },
+    "missing_fields": [
+      "tenant",
+      "leaseTerm Commencement Date",
+      "leaseTerm Expiration Date",
+      "monthlyRent Amount",
+      "securityDeposit"
+    ],
+    "analysis": {
+      "documentId": "0033bb6a-2d27-4ffd-ae17-0f4bec0a2395",
+      "pdfUrl": "/sample-lease.pdf",
+      "documentMetadata": {
+        "fileName": "sample-lease.pdf",
+        "uploadDate": "2025-11-08T15:16:35.987358",
+        "fileSize": "140 KB",
+        "pageCount": 0,
+        "documentType": "Commercial Lease",
+        "parties": {
+          "landlord": "Town of Swampscott",
+          "tenant": "Test Tenant",
+          "property": "16 New Ocean Street"
+        }
+      },
+      "deidentificationSummary": {
+        "itemsRedacted": 0,
+        "categories": []
+      },
+      "keyDetailsDetected": {
+        "leaseType": "Commercial",
+        "propertyAddress": "16 New Ocean Street",
+        "landlord": "Town of Swampscott",
+        "leaseTerm": "12 months",
+        "monthlyRent": "$2500",
+        "securityDeposit": "$5000",
+        "specialClauses": [
+          "Chapter 186, Section 15E",
+          "Chapter 186, Section 15",
+          "Chapter 186, Section 15",
+          "Chapter 186, Section 15",
+          "Chapter 186, Section 15"
+        ]
+      },
+      "analysisSummary": {
+        "status": "complete",
+        "summaryText": "Analysis Complete \u2014 7 key issues found. \u26a0\ufe0f  Found 7 illegal clause(s) that violate Massachusetts law | \u26a1 Identified 12 risky term(s) that could be problematic | \u2713 Found 6 tenant-favorable provision(s) | Power Imbalance Score: 100/100 (Concerning)",
+        "overallRisk": "High",
+        "issuesFound": 7,
+        "potential_recovery": 7850,
+        "estimatedRecovery": "$7,850",
+        "topIssues": [
+          {
+            "title": "Chapter 186, Section 15E",
+            "severity": "high",
+            "amount": "$500"
+          },
+          {
+            "title": "Chapter 186, Section 15",
+            "severity": "critical",
+            "amount": "$5,000"
+          },
+          {
+            "title": "Chapter 186, Section 15",
+            "severity": "critical",
+            "amount": "$100"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "id": "hl-001",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15E",
+          "text": "The [NAME_REDACTED]ses are delivered to [NAME_REDACTED] and [NAME_REDACTED] accepts the [NAME_REDACTED]ses in their present condition, \u201cAS IS,\u201d it being agreed that [NAME_REDACTED] has had a n opportunity to examine and inspect the [NAME_REDACTED]ses in all respects, that [NAME_REDACTED] has made no representations or warranties of any kind with respect thereto, and that [NAME_REDACTED] shall have no obligation to do any work on, or make any improvements to the [NAME_REDACTED] ses or the condition thereof.",
+          "statute": "Chapter 186, Section 15E",
+          "explanation": "This 'as is' clause attempts to waive the landlord's responsibility for defects in common areas that violate the building code at the time of injury. Section 15E explicitly prohibits such waivers, stating any waiver is void and unenforceable. This clause could also be construed as an attempt to disclaim the implied warranty of habitability, which is illegal in Massachusetts.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-002",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "9.2. Release.  To the maximum extent this [NAME_REDACTED]se may be made effective according to law, [NAME_REDACTED] agrees to use and occupy the [NAME_REDACTED]s es at [NAME_REDACTED]'s own risk, and [NAME_REDACTED] shall have no responsibility or liability for any loss or damage to fixtures or other personal property of [NAME_REDACTED] or any person claiming by, through or under [NAME_REDACTED].  Without limitation, [NAME_REDACTED] agrees that [NAME_REDACTED] sha ll not be responsible or liable to [NAME_REDACTED], or those claiming by, through or under [NAME_REDACTED], for any loss or damage resulting to [NAME_REDACTED] or those claiming by, through or under [NAME_REDACTED], its or their property from the breaking, bursting, stopping or leaking of [ORG_REDACTED] and wires, and water, gas or steam pipes.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause attempts to exculpate the landlord from liability for damage to the tenant's property, even if caused by the landlord's negligence. This is explicitly prohibited by M.G.L. c. 186, \u00a7 15, which states that any provision in a lease exempting a landlord from liability for injuries caused by their negligence in common areas is void.",
+          "damages_estimate": 5000,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-003",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "9.1. Indemnification. [NAME_REDACTED] shall, during the term hereof, assume and maintain exclusive control of the [NAME_REDACTED]ses and defend, indemn ify and save harmless [NAME_REDACTED] from and against all claims, expenses or liability of whatever nature arising from any act, omission or negligence of [NAME_REDACTED], [NAME_REDACTED]'s contractors, agents, employees, customers, and invitees, or anyone claiming by, through or under [NAME_REDACTED], or arising, directly or indirectly, from any accident, injury or damage whatsoever, however caused, to any person, or to the property of any person, occurring after [NAME_REDACTED] enters the [NAME_REDACTED]ses for any reason and until the end of the term of t his [NAME_REDACTED]se and, thereafter, so long as [NAME_REDACTED] or any occupant claiming under [NAME_REDACTED] is in occupancy of any part of the [NAME_REDACTED]ses, in or about the [NAME_REDACTED]ses, or arising from any accident occurring outside the [NAME_REDACTED]ses but within the general area of the [NAME_REDACTED]se s, where such accident, injury or damage results or is claimed to have resulted from any act, omission or negligence on the part of [NAME_REDACTED] or [NAME_REDACTED]'s contractors, agents, employees, customers, and invitees, or anyone claiming by, through or under [NAME_REDACTED].",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause requires the tenant to indemnify the landlord for claims arising from the landlord's negligence. This is explicitly prohibited by M.G.L. c. 186, \u00a7 15, which states that any lease provision requiring a tenant to indemnify the landlord for the landlord's negligence is against public policy and void.",
+          "damages_estimate": 100,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-004",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "9.2. Release. To the maximum extent this [NAME_REDACTED]se may be made effective according to law, [NAME_REDACTED] agrees to use and occupy the [NAME_REDACTED]s es at [NAME_REDACTED]'s own risk, and [NAME_REDACTED] shall have no responsibility or liability for any loss or damage to fixtures or other personal property of [NAME_REDACTED] or any person claiming by, through or under [NAME_REDACTED]. Without limitation, [NAME_REDACTED] agrees that [NAME_REDACTED] sha ll not be responsible or liable to [NAME_REDACTED], or those claiming by, through or under [NAME_REDACTED], for any loss or damage resulting to [NAME_REDACTED] or those claiming by, through or under [NAME_REDACTED], its or their property from the breaking, bursting, stopping or leaking of [ORG_REDACTED] and wires, and water, gas or steam pipes.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause attempts to release the landlord from all responsibility or liability for any loss or damage to the tenant's property, even if caused by the landlord's negligence, which is against public policy according to M.G.L. c. 186, \u00a7 15. While it states \"To the maximum extent this [NAME_REDACTED]se may be made effective according to law,\" the core intent is still to exculpate the landlord from liability, making it invalid.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-005",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "10.3. [ORG_REDACTED]. [NAME_REDACTED] hereby waives any and all rights of recovery which it might otherwise have against [NAME_REDACTED], its agents, employees and other persons for whom [NAME_REDACTED] may be responsible for any loss or damage to [NAME_REDACTED]\u2019s property or improvements in the [NAME_REDACTED]ses whi ch are either required to be insured under the terms of this [NAME_REDACTED]se or which [NAME_REDACTED], in the absence of any such requirement, elects to insure, notwithstanding that the loss or damage may result from the negligence, willful act or default under the terms of this [NAME_REDACTED]se by [NAME_REDACTED], its agents, employees, contractors, or other persons for whom [NAME_REDACTED] may be responsible.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This is another attempt to exonerate the landlord from liability for damages to the tenant's property, even if the damage is caused by the landlord's negligence or willful acts. This contravenes M.G.L. c. 186, \u00a7 15.",
+          "damages_estimate": 750,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-006",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "[NAME_REDACTED] hereby waives any and all rights of recovery which it might otherwise have against \n[NAME_REDACTED], its agents, employees and other persons for whom [NAME_REDACTED] may be responsible for any loss \nor damage to [NAME_REDACTED]\u2019s property or improvements in the [NAME_REDACTED]ses whi ch are either required to be \ninsured under the terms of this [NAME_REDACTED]se or which [NAME_REDACTED], in the absence of any such requirement, elects to \ninsure, notwithstanding that the loss or damage may result from the negligence, willful act or default \nunder the terms of this [NAME_REDACTED]se by [NAME_REDACTED], its agents, employees, contractors, or other persons for \nwhom [NAME_REDACTED] may be responsible.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause attempts to exculpate the landlord from liability for their own negligence, willful acts, or defaults, even when related to damage to the tenant's property. This is explicitly prohibited under M.G.L. c. 186, \u00a7 15, which states that any lease provision indemnifying the landlord or precluding liability for their own misconduct is against public policy and void.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-007",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "[NAME_REDACTED] acknowledges and agrees that in no \nevent shall [NAME_REDACTED] be liable for any injury, harm or any other loss, cost, expense, demand, claim, or \nhave any obligation to repair, replace, improve, restore and/or rebuild, any damage of any kind or \nnature whatsoever to the [NAME_REDACTED]ses or any portion thereof caused by an eminent domain taking or by \nfire, flood or other casualty.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause, similar to the previous one, aims to shield the landlord from liability for injury, harm, loss, or damage related to the premises due to events like eminent domain, fire, or flood, regardless of negligence. This is prohibited under M.G.L. c. 186, \u00a7 15 if it relates to the landlord's own negligence or failure to maintain the property as required by law.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-008",
+          "pageNumber": 3,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Potentially exceeding legal interest limits; conflict with 186, Section 15B(1)(c)",
+          "text": "4.5. Interest. All payments becoming due under this [NAME_REDACTED]se and not paid when due s hall bear interest from the applicable due date until received by [NAME_REDACTED] at an annual rate equal to the prime rate of interest charged from time to time by [ORG_REDACTED] or its successor, plus two percent (2%).",
+          "statute": "M.G.L. c. 186",
+          "explanation": "While charging interest on late rent is permissible, this clause lacks clarity and may impose interest or penalties for late payments *before* 30 days after the rent is due. Chapter 186, Section 15B(1)(c) prohibits any interest or penalty for failure to pay rent until 30 days after it is due. Without specifying the timeframe, it could conflict with tenant rights.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72.02,
+              "y1": 426.55,
+              "x2": 129.55,
+              "y2": 437.59,
+              "pageNumber": 3
+            },
+            "rects": [
+              {
+                "x1": 72.02,
+                "y1": 426.55,
+                "x2": 129.55,
+                "y2": 437.59,
+                "pageNumber": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-009",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Potentially shifting too much responsibility to the tenant regarding maintenance.",
+          "text": "6.1. [NAME_REDACTED]\u2019s Responsibility.  [NAME_REDACTED] shall be responsible for maintaining the [NAME_REDACTED]ses in g ood and clean condition and order at its sole expense.  Without limiting the foregoing, [NAME_REDACTED] shall keep the [NAME_REDACTED]ses, including, without limitation, the electrical fixtures, windows, halls, stairwells, lavatories and all other areas of the Building, the landscaping (including, without limitation, keeping the grass neat and cut and trimming of trees and bushes) in good condition, damage by fire or other casualty, and ordinary wear and tear only excepted.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "This clause attempts to place a significant burden of maintenance and repair on the tenant, potentially including aspects that a landlord is normally responsible for under the implied warranty of habitability. While tenants can be responsible for some maintenance, this clause's breadth is concerning. It is imperative to determine whether the term 'Premises' refers to the entire building (which would be egregious) or just the specific unit being leased (which is still quite broad but less concerning). The legality of this will depend on the specific use and character of the property. If this is a standard commercial property, it may be valid. If it's a dwelling, it is far less likely to be valid",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-010",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Potential for the Landlord to attempt to pass maintenance obligations to the tenant and overcharge them.",
+          "text": "6.4 [NAME_REDACTED]\u2019s Failure to Maintain.  If any maintenance, repair and/or replacements is required to be made by [NAME_REDACTED] pursuant to the terms hereof and [NAME_REDACTED] fails to cure the same within thirty (30) days after no tice by [NAME_REDACTED] (or, in the event of an emergency, with such notice as is practicable), [NAME_REDACTED] shall have the right (but shall not be obligated) to make such repairs, replacements or perform maintenance work or any other work required of [NAME_REDACTED] pursuant  to this [NAME_REDACTED]se and charge the cost thereof to [NAME_REDACTED] as [ORG_REDACTED], which, if not paid within thirty (30) days from the presentment of invoices therefore, shall bear interest at the rate set forth herein.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "This clause appears to shift responsibility for some maintenance and repairs onto the tenant, as it says the landlord can make repairs at the tenant's expense if the landlord fails to do so after notice. It's ambiguous as to what 'repairs required to be made by [NAME_REDACTED]' entails. This could be problematic because it might allow the landlord to charge the tenant for repairs that are normally the landlord's responsibility under Massachusetts law (implied warranty of habitability) or the lease. Furthermore, there's vagueness around what 'such notice as is practicable' constitutes during an emergency, leaving room for potential abuse. The tenant should carefully document all communication with the landlord regarding maintenance and repairs.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-011",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Potential for significant financial burden and disputes over required improvements.",
+          "text": "7.1. Construction of Improvements.  [NAME_REDACTED] shall obtain the [NAME_REDACTED]'s written approval prior to making any structural alterations or additions to the [NAME_REDACTED]ses.   [NAME_REDACTED] may make non -structural alterations or additions to the [NAME_REDACTED]ses, including paving the unp aved, unlined parking area located around the Building.  All such allowed or required alterations or additions shall be at [NAME_REDACTED]'s sole expense, shall be in accordance with all applicable laws and codes, and shall be in quality at least equal to the prese nt construction.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "This clause places the sole financial burden for all alterations and additions, structural or non-structural, on the tenant. While it requires the landlord's approval for structural changes, the requirement to bring alterations to at least equal quality to the present construction is subjective and could lead to disputes. Forcing the tenant to pay for major improvements that ultimately benefit the landlord and increase the property's value could be seen as unfair, especially if these improvements are extensive or unexpected. This could also be a violation of Ch. 93A if the landlord is found to be acting unfairly or deceptively. The clause also requires that the TENANT make non-structural alterations (paving the parking area). It's unusual for a tenant to have to improve the land, so this should be reviewed carefully.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-012",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Tenant is responsible to Indemnify the Landlord against Injury, Loss or Damage",
+          "text": "7.2 Compliance with Laws.  [NAME_REDACTED] shall procure all necessary permits before undertaking any work on the [NAME_REDACTED]ses, including without limitation any structural alterations, and shall cause all such work to be performed in a good and first -class workmanlike manner and in accordance with the requirements of insurers, employing new materials of prime quality and shall defend, hold harmless, exonerate and indemnify [NAME_REDACTED] from all injury, loss or damage to any person or property occasioned b y such work. [NAME_REDACTED] shall at all times comply with (i) Massachusetts public bidding laws and all laws, rules, orders and regulations of governmental authorities having jurisdiction thereof, in effect at the time of application for permits for such work; (i i) orders, rules and regulations of any [ORG_REDACTED], or any other body hereafter constituted exercising similar functions, and governing insurance rating bureaus; and (iii) plans and specifications (which shall be prepared by and at the expe nse of [NAME_REDACTED] and approved by [NAME_REDACTED] prior to beginning any work).",
+          "statute": "M.G.L. c. 186",
+          "explanation": "This clause makes the tenant responsible for indemnifying the landlord for work performed, even if the work is required by the landlord and benefits them. This clause is overbroad and places an unreasonable burden on the tenant, especially if the 'work' benefits the landlord.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-013",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Tenant responsible to Indeminify the Landlord.",
+          "text": "7.3 [ORG_REDACTED].  [NAME_REDACTED] shall not permit any mechanics\u2019 liens, or similar liens, to remain upon the [NAME_REDACTED]ses for labor and material furnished to [NAME_REDACTED] or claimed to have been furnished to [NAME_REDACTED] in connection with work of any character performed or claimed to have been performed at the direction of [NAME_REDACTED], and shall cause any such lien to be released of record without cost to [NAME_REDACTED] within twenty (20) days after [NAME_REDACTED] receives notice of filing of same.  In connection with the foregoing, [NAME_REDACTED] agrees to indemnify, save, defend, and hold harmless [NAME_REDACTED] against, of and from all costs, liabilities, suits, penalties, claims and demands, including reasonable counsel fees, resulting there from.  If [NAME_REDACTED] shall fail to discharge such liens within such period or fail to furnish security therefor, then [NAME_REDACTED] may, but shall not be obligated to, discharge the same, and [NAME_REDACTED] agrees to reimburse [NAME_REDACTED] promptly upon demand for all costs, e xpenses and other sums of money in connection therewith as [ORG_REDACTED], with interest.  All materialmen, contractors, artisans, mechanics, laborers and any other persons now or hereafter who contract with [NAME_REDACTED] for the furnishing of any labor, service s, materials, supplies or equipment with respect to any portion of the [NAME_REDACTED]ses are hereby charged with notice that they must look exclusively to [NAME_REDACTED] to obtain payment for same.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "This clause again places an undue burden on the tenant. Requiring the tenant to indemnify and defend the landlord against all mechanics liens, even those arising from work the landlord directed, is problematic. The clause attempts to force contractors to look only to the tenant for payment, which may not be legally enforceable in all situations. It's a risky clause that could expose the tenant to significant financial liability. It essentially makes the tenant responsible for the landlord's debts if they relate to improvements.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-014",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Tenant indemnifies the Landlord against environmental hazards, and bears the entire responsibility.",
+          "text": "8.3 [ORG_REDACTED].  [NAME_REDACTED] shall not bring onto, store, release, dispose or threaten the release from the [NAME_REDACTED]ses or elsewhere on the [NAME_REDACTED]ses any hazardous, toxic, inflammable, combust ible or explosive fluid, material, chemical, or substance, including without limitation any item defined as hazardous pursuant Chapter 21E of [ORG_REDACTED] and federal and other state laws (\u201c[ORG_REDACTED]\u201d). [NAME_REDACTED] shall defend, ind emnify and hold harmless [NAME_REDACTED], and those claiming by, through and under [NAME_REDACTED], from and against any and all liability, loss, damage, costs, expenses (including, without limitation, reasonable attorneys\u2019 fees and expenses), causes of action, suits, c laims, demands or judgments of any nature in any way suffered, incurred, or paid as a result of any release or threatened release of [ORG_REDACTED] on or from the [NAME_REDACTED]ses which is caused or exacerbated by [NAME_REDACTED], its agents, employees, contractors, representatives, or invitees.  [NAME_REDACTED] shall have no responsibility to [NAME_REDACTED], its agents, employees, representatives and invitees, for the presence of [ORG_REDACTED] on the [NAME_REDACTED]ses or be required to abate or remediate the same.  The provisions of this Section shall survive the expiration or earlier termination of the [NAME_REDACTED]se.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "This clause seeks to protect the Landlord against any and all environemental hazards. The tenant, in turn, would be responsible for the cost of any and all liability, loss, damage, costs, expenses (including, without limitation, reasonable attorneys\u2019 fees and expenses), causes of action, suits, c laims, demands or judgments. ",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-015",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "This clause requires the tenant to indemnify the landlord for a wide range of potential liabilities, including those arising from the tenant's own negligence or the negligence of third parties.",
+          "text": "9.1. Indemnification.  [NAME_REDACTED] shall, during the term hereof, assume and maintain exclusive control of the [NAME_REDACTED]ses and defend, indemn ify and save harmless [NAME_REDACTED] from and against all claims, expenses or liability of whatever nature arising from any act, omission or negligence of [NAME_REDACTED], [NAME_REDACTED]'s contractors, agents, employees, customers, and invitees, or anyone claiming by, through or  under [NAME_REDACTED], or arising, directly or indirectly, from any accident, injury or damage whatsoever, however caused, to any person, or to the property of any person, occurring after [NAME_REDACTED] enters the [NAME_REDACTED]ses for any reason and until the end of the term of t his [NAME_REDACTED]se and, thereafter, so long as [NAME_REDACTED] or any occupant claiming under [NAME_REDACTED] is in occupancy of any part of the [NAME_REDACTED]ses, in or about the [NAME_REDACTED]ses, or arising from any accident occurring outside the [NAME_REDACTED]ses but within the general area of the [NAME_REDACTED]se s, where such accident, injury or damage results or is claimed to have resulted from any act, omission or negligence on the part of [NAME_REDACTED] or [NAME_REDACTED]'s contractors, agents, employees, customers, and invitees, or anyone claiming by, through or under [NAME_REDACTED].",
+          "statute": "M.G.L. c. 186",
+          "explanation": "This is a broad indemnification clause that goes beyond what is normally expected. It requires the tenant to defend and indemnify the landlord against claims arising from the tenant's acts, omissions, or negligence, as well as those of the tenant's contractors, agents, employees, customers, and invitees. This clause could make the tenant responsible for accidents or injuries that occur on the premises, even if they are not directly caused by the tenant. This could be considered an unfair business practice under Chapter 93A.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-016",
+          "pageNumber": 8,
+          "color": "orange",
+          "priority": 2,
+          "category": "This clause grants the Landlord complete authority over Legal Matters",
+          "text": "The foregoing indemnity and hold harmless agreement shall include indemnity against all costs, expenses and liabilities incurred in or in connection with any such claim or proceeding brought thereon, including attorneys\u2019 fees, and the defense thereof with  counsel acceptable to [NAME_REDACTED] or counsel selected by an insurance company which has accepted liability for any such claim.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "The Landlord has complete authority over the legal team selected for any matter. Tenant may or may not agree, and the Tenant still bares the risk in this matter.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72.02,
+              "y1": 323.57,
+              "x2": 501.13,
+              "y2": 334.61,
+              "pageNumber": 8
+            },
+            "rects": [
+              {
+                "x1": 72.02,
+                "y1": 323.57,
+                "x2": 501.13,
+                "y2": 334.61,
+                "pageNumber": 8
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-017",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Unilateral power to increase insurance coverage",
+          "text": "10.1 [NAME_REDACTED]\u2019s Insurance. [NAME_REDACTED] shall obtain and keep in force at its own expense so long as this [NAME_REDACTED]se remains in effect and thereafter so long as [NAME_REDACTED], or anyone claiming by, through or under [NAME_REDACTED], uses or occupies the [NAME_REDACTED]ses or any part thereof, policies of insurance for the benefit of such parties, in the amounts, and in the manner and form se t forth in this Section; provided, however, that amounts of insurance coverage may from time to time be increased.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "The clause allows the landlord to unilaterally increase the required insurance coverage without clearly defining the parameters for such increases. This lacks specific guidelines and could result in the tenant having to bear unexpected and potentially substantial insurance costs. The clause also requires the Tenant to continue to maintain insurance even after the lease has ended if there is continued use or occupancy of the Premises by Tenant, or anyone claiming by, through, or under Tenant.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-018",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Unclear repair obligations after casualty",
+          "text": "11. (c) [NAME_REDACTED] acknowledges and agrees that in no event shall [NAME_REDACTED] be liable for any injury, harm or any other loss, cost, expense, demand, claim, or have any obligation to repair, replace, improve, restore and/or rebuild, any damage of any kind or nature whatsoever to the [NAME_REDACTED]ses or any portion thereof caused by an eminent domain taking or by fire, flood or other casualty.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "While the clause states the landlord has no obligation to repair damages from eminent domain, fire, flood, or other casualty, this could create issues if the damage makes the premises uninhabitable or unsuitable for the intended use. The lease should clearly define who bears the responsibility for repairs in such cases to avoid disputes, and the terms of what happens to rent should be more clearly defined during the period of disrepair",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-019",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Potential for overbroad interpretation and unfair burden on the tenant.",
+          "text": "To the extent permitted by law, [NAME_REDACTED] shall indemnify [NAME_REDACTED] dlord against all payments which [NAME_REDACTED] may incur by \nreason of such termination during the residue of the Term.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "While seemingly standard, the phrase 'to the extent permitted by law' is vague. It could be interpreted to obligate the tenant to indemnify the landlord even for breaches of contract or negligence that caused the termination. The lack of specificity could lead to disputes.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-020",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "This clause clarifies that the landlord is responsible for major structural and utility repairs, ensuring the tenant has recourse if these essential systems fail.",
+          "text": "6.2 [NAME_REDACTED]\u2019s Responsibility. [NAME_REDACTED] shall be responsible for the electrical wiring and lighting, all plumbing and utility lines serving the [NAME_REDACTED]ses, the heating and ventilating system and the fire protection equipment and syste ms serving the Building, the roof, exterior walls and foundations of the Building, in good and safe order, condition and repair, reasonable wear and tear and damage by fire or other casualty excepted. [NAME_REDACTED] shall be responsible for removing snow and ice from the [NAME_REDACTED]ses, including all sidewalks, walkways, and parking areas.",
+          "statute": "Implied Warranty of Habitability",
+          "explanation": "This clause clarifies that the landlord is responsible for major structural and utility repairs, ensuring the tenant has recourse if these essential systems fail.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-021",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "Requires the landlord to provide 24 hours notice before entry for inspections, protecting the tenant's privacy.",
+          "text": "6.3 Inspection.  Without limiting [NAME_REDACTED]\u2019s rights to access the [NAME_REDACTED]ses under other provisions of this [NAME_REDACTED]se, [NAME_REDACTED] hereby specifically reserves the right to conduct an annua l inspection of the [NAME_REDACTED]ses, and [NAME_REDACTED] shall allow entry and access to [ORG_REDACTED], [ORG_REDACTED], and such other persons as the [ORG_REDACTED] may designate, for the purpose of investigating the condition of the of the [NAME_REDACTED]s es.  [NAME_REDACTED] shall provide [NAME_REDACTED] with a minimum notice of twenty -four (24) hours, and not interfere unreasonably with [NAME_REDACTED]\u2019s use of the [NAME_REDACTED]ses.",
+          "statute": "Chapter 186, Section 15B(1)(a)",
+          "explanation": "Requires the landlord to provide 24 hours notice before entry for inspections, protecting the tenant's privacy.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-022",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "Clarifies the permissible use of the property, preventing the landlord from later claiming the tenant is violating the lease by using it for an unapproved purpose. Also establishes the tenant's responsibility to maintain the property, but with exceptions for reasonable wear and tear and damage by fire/casualty.",
+          "text": "8.1 Permitted Uses.  [NAME_REDACTED] shall use the [NAME_REDACTED]ses solely for [ORG_REDACTED]. [NAME_REDACTED] shall keep the [NAME_REDACTED]ses in good order, reasonable wear and tear and damage by fire or other casualty only excepted, and shall not commit or permit [NAME_REDACTED]'s servants, agents or invitees to commit waste to the [NAME_REDACTED]ses.",
+          "statute": null,
+          "explanation": "Clarifies the permissible use of the property, preventing the landlord from later claiming the tenant is violating the lease by using it for an unapproved purpose. Also establishes the tenant's responsibility to maintain the property, but with exceptions for reasonable wear and tear and damage by fire/casualty.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-023",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "Allows tenant to terminate the lease if the premises are damaged or taken by eminent domain and the damage interferes with the use of the Premises. The landlord has a similar right to terminate.",
+          "text": "11. (b) If the [NAME_REDACTED]ses or any portion thereof shall be destroyed or damaged by fire or other casualty, or taken by any public or quasi -public agency or authority other than [NAME_REDACTED] by right of eminent domain, and the casualty/taking unreasonably interferes with the use of the [NAME_REDACTED]ses for the Permitted Uses in a manner comparable to such use prior to such casualty/condemnation, this [NAME_REDACTED] se shall terminate at the election of either [NAME_REDACTED] or [NAME_REDACTED].  Any such termination shall be effective thirty (30) days after the date of notice thereof.",
+          "statute": "Common Law",
+          "explanation": "Allows tenant to terminate the lease if the premises are damaged or taken by eminent domain and the damage interferes with the use of the Premises. The landlord has a similar right to terminate.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-024",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "Guarantees the tenant's right to quiet enjoyment of the property.",
+          "text": "[NAME_REDACTED] hereby warrants and covenants that [NAME_REDACTED] shall have peaceful and \nquiet use and possession of the [NAME_REDACTED]ses without hindrance or interruption on the part  of [NAME_REDACTED], or \nby any other person(s) for whose actions [NAME_REDACTED] is legally responsible, or by any person claiming by, \nthrough or under [NAME_REDACTED], except as herein provided.",
+          "statute": "Implied Covenant of Quiet Enjoyment under Massachusetts Law",
+          "explanation": "Guarantees the tenant's right to quiet enjoyment of the property.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        },
+        {
+          "id": "hl-025",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "Specifies the conditions under which the landlord can enter the premises, including a notice requirement and limitations on interference with the tenant's business.",
+          "text": "[NAME_REDACTED] or its agents may, at reasonable times and wit hout interfering with \n[NAME_REDACTED]'s business operations, enter the [NAME_REDACTED]ses from time to time to make repairs or to inspect the \n[NAME_REDACTED]ses.  [NAME_REDACTED] shall give [NAME_REDACTED] a minimum of twenty -four (24) hours\u2019 notice for such visits, \nprovided however that [NAME_REDACTED] may  enter the [NAME_REDACTED]ses at any hour and without prior notice in the \ncase of an emergency affecting the [NAME_REDACTED]ses.",
+          "statute": "This is a negotiated term; although c. 186, \u00a715B(1)(a) generally forbids landlord entry, an exception exists to inspect/repair with proper notice.",
+          "explanation": "Specifies the conditions under which the landlord can enter the premises, including a notice requirement and limitations on interference with the tenant's business.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 200,
+              "x2": 540,
+              "y2": 250,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 200,
+                "x2": 540,
+                "y2": 250,
+                "pageNumber": 1
+              }
+            ]
+          }
+        }
+      ],
+      "document_info": {
+        "total_characters": 43867,
+        "total_chunks": 4,
+        "analysis_date": "2025-11-08T15:26:21.444557"
+      }
+    },
+    "analyzed_at": "2025-11-08T15:26:21.534265"
+  },
+  "a4e283ac-c62d-4626-90cd-8a395618f9d8": {
+    "file_id": "a4e283ac-c62d-4626-90cd-8a395618f9d8",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/a4e283ac-c62d-4626-90cd-8a395618f9d8.pdf",
+    "redacted_text_path": "uploads/a4e283ac-c62d-4626-90cd-8a395618f9d8_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:18:19.447988",
+    "status": "awaiting_metadata",
+    "progress": 0,
+    "message": "Please provide missing document information",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 12,
+      "organization": 36
+    },
+    "metadata": {
+      "documentType": "Commercial Lease Agreement",
+      "parties": {
+        "landlord": "TOWN OF SWAMPSCOTT",
+        "tenant": "Not specified",
+        "property": "[ADDRESS_REDACTED], Swampscott, Massachusetts"
+      },
+      "leaseDetails": {
+        "leaseType": "Commercial",
+        "leaseTerm": "Commences on __________________ , 2019 and expires on __________________, 20__ with option to extend for a ________ (__) year term, for a total maximum term of ________________ (_ ___) years.",
+        "monthlyRent": "__________________ _______ Dollars ($_____) per month, during the Term of this [NAME_REDACTED]se (as increased annually, [ORG_REDACTED]\u201d).",
+        "securityDeposit": "Not specified"
+      },
+      "missing_fields": [
+        "tenant",
+        "Commencement Date",
+        "Expiration Date",
+        "Extension Term Length",
+        "Total Maximum Term",
+        "Monthly Rent Amount"
+      ],
+      "pageCount": 16
+    },
+    "missing_fields": [
+      "tenant",
+      "Commencement Date",
+      "Expiration Date",
+      "Extension Term Length",
+      "Total Maximum Term",
+      "Monthly Rent Amount"
+    ]
+  },
+  "47717876-b008-4a0f-bf5c-bf19c9f7237f": {
+    "file_id": "47717876-b008-4a0f-bf5c-bf19c9f7237f",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/47717876-b008-4a0f-bf5c-bf19c9f7237f.pdf",
+    "redacted_text_path": "uploads/47717876-b008-4a0f-bf5c-bf19c9f7237f_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:19:17.884940",
+    "status": "metadata_complete",
+    "progress": 0,
+    "message": "Metadata extracted successfully",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 12,
+      "organization": 36
+    },
+    "metadata": {
+      "documentType": "Commercial Lease Agreement",
+      "parties": {
+        "landlord": "TOWN OF SWAMPSCOTT",
+        "tenant": "[REDACTED]",
+        "property": "[ADDRESS_REDACTED], Swampscott, Massachusetts"
+      },
+      "leaseDetails": {
+        "leaseType": "Commercial",
+        "leaseTerm": "Commences on [REDACTED], 2019 and expires on [REDACTED], 20__, with [REDACTED] having the right to extend the term of the [REDACTED]se for a ________ (__) year term (the \u201cExtension Term\u201d), for a total maximum term of ________________ (_ ___) years",
+        "monthlyRent": "[REDACTED] Dollars ($[REDACTED]) per month, during the Term of this [REDACTED]se (as increased annually, [REDACTED]\u201d).",
+        "securityDeposit": "Not specified"
+      },
+      "missing_fields": [],
+      "pageCount": 16
+    }
+  },
+  "742052a3-3e7c-481c-ad90-6a929bad8c66": {
+    "file_id": "742052a3-3e7c-481c-ad90-6a929bad8c66",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/742052a3-3e7c-481c-ad90-6a929bad8c66.pdf",
+    "redacted_text_path": "uploads/742052a3-3e7c-481c-ad90-6a929bad8c66_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:19:47.205111",
+    "status": "awaiting_metadata",
+    "progress": 0,
+    "message": "Please provide missing document information",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 12,
+      "organization": 36
+    },
+    "metadata": {
+      "documentType": "Commercial Lease Agreement",
+      "parties": {
+        "landlord": "TOWN OF SWAMPSCOTT",
+        "tenant": "Not specified",
+        "property": "[ADDRESS_REDACTED], Swampscott, Massachusetts"
+      },
+      "leaseDetails": {
+        "leaseType": "Commercial",
+        "leaseTerm": "Commences on __________________ , 2019 (the \u201cCommencement Date\u201d) and expire on __________________, 20__ (the \u201c[ORG_REDACTED]\u201d), with [NAME_REDACTED] having the right to extend the term of the [NAME_REDACTED]se for a ________ (__) year term (the \u201cExtension Term\u201d), for a total maximum term of ________________ (_ ___) years",
+        "monthlyRent": "__________________ _______ Dollars ($_____) per month, during the Term of this [NAME_REDACTED]se (as increased annually, [ORG_REDACTED]\u201d)",
+        "securityDeposit": "Not specified"
+      },
+      "missing_fields": [
+        "tenant",
+        "monthlyRent",
+        "leaseTerm_startDate",
+        "leaseTerm_endDate",
+        "Extension_year",
+        "Total_term_years"
+      ],
+      "pageCount": 16
+    },
+    "missing_fields": [
+      "tenant",
+      "monthlyRent",
+      "leaseTerm_startDate",
+      "leaseTerm_endDate",
+      "Extension_year",
+      "Total_term_years"
+    ]
+  },
+  "fab59766-7668-480b-b2b9-d016414775dd": {
+    "file_id": "fab59766-7668-480b-b2b9-d016414775dd",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/fab59766-7668-480b-b2b9-d016414775dd.pdf",
+    "redacted_text_path": "uploads/fab59766-7668-480b-b2b9-d016414775dd_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:21:39.857906",
+    "status": "awaiting_metadata",
+    "progress": 0,
+    "message": "Please provide missing document information",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 12,
+      "organization": 36
+    },
+    "metadata": {
+      "documentType": "Commercial Lease Agreement",
+      "parties": {
+        "landlord": "TOWN OF SWAMPSCOTT",
+        "tenant": "Not specified",
+        "property": "[ADDRESS_REDACTED], Swampscott, Massachusetts"
+      },
+      "leaseDetails": {
+        "leaseType": "Commercial",
+        "leaseTerm": "Commences on __________________ , 2019 and expires on __________________, 20__ with option to extend for a ________ (__) year term for a total maximum term of ________________ (_ ___) years.",
+        "monthlyRent": "__________________ _______ Dollars ($_____) per month, during the Term of this [NAME_REDACTED]se (as increased annually, [ORG_REDACTED]\u201d",
+        "securityDeposit": "Not specified"
+      },
+      "missing_fields": [
+        "tenant",
+        "Commencement Date",
+        "Expiration Date",
+        "Extension Term Length",
+        "Maximum Term Length",
+        "Monthly Rent Amount"
+      ],
+      "pageCount": 16
+    },
+    "missing_fields": [
+      "tenant",
+      "Commencement Date",
+      "Expiration Date",
+      "Extension Term Length",
+      "Maximum Term Length",
+      "Monthly Rent Amount"
+    ]
+  },
+  "ab74c742-3b6f-49d7-a367-d7be067cb325": {
+    "file_id": "ab74c742-3b6f-49d7-a367-d7be067cb325",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/ab74c742-3b6f-49d7-a367-d7be067cb325.pdf",
+    "redacted_text_path": "uploads/ab74c742-3b6f-49d7-a367-d7be067cb325_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:22:42.889403",
+    "status": "awaiting_metadata",
+    "progress": 0,
+    "message": "Please provide missing document information",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 12,
+      "organization": 36
+    },
+    "metadata": {
+      "documentType": "Commercial Lease Agreement",
+      "parties": {
+        "landlord": "TOWN OF SWAMPSCOTT",
+        "tenant": "[REDACTED]",
+        "property": "[ADDRESS_REDACTED], Swampscott, Massachusetts"
+      },
+      "leaseDetails": {
+        "leaseType": "Commercial",
+        "leaseTerm": "Commences on [REDACTED], 2019 and expires on [REDACTED], 20__ with option to extend for a ________ (__) year term, for a total maximum term of ________________ (_ ___) years",
+        "monthlyRent": "Base rent of ______________________ Dollars ($_______________) per year to be paid in monthly installments of __________________ _______ Dollars ($_____) per month, increased annually by _____ percent (____%)",
+        "securityDeposit": "Not specified"
+      },
+      "missing_fields": [
+        "tenant address",
+        "Date of Lease",
+        "Permitted Uses",
+        "Commencement Date",
+        "Expiration Date",
+        "Base rent amount per year",
+        "Base rent amount per month",
+        "Start Date for Rent",
+        "Annual Rent Increase Percentage",
+        "Extension Term Length",
+        "Maximum Term Length"
+      ],
+      "pageCount": 16
+    },
+    "missing_fields": [
+      "tenant address",
+      "Date of Lease",
+      "Permitted Uses",
+      "Commencement Date",
+      "Expiration Date",
+      "Base rent amount per year",
+      "Base rent amount per month",
+      "Start Date for Rent",
+      "Annual Rent Increase Percentage",
+      "Extension Term Length",
+      "Maximum Term Length"
+    ]
+  },
+  "d347a9d0-8515-4936-a584-5d4db9425ea4": {
+    "file_id": "d347a9d0-8515-4936-a584-5d4db9425ea4",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/d347a9d0-8515-4936-a584-5d4db9425ea4.pdf",
+    "redacted_text_path": "uploads/d347a9d0-8515-4936-a584-5d4db9425ea4_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:29:17.567628",
+    "status": "metadata_extracted",
+    "progress": 30,
+    "message": "Metadata extracted. Ready for full analysis.",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 13,
+      "organization": 37
+    },
+    "extracted_metadata": {
+      "fileName": "Town of Swampscott Lease Agreement - [ADDRESS_REDACTED]",
+      "documentType": "Commercial Lease Agreement",
+      "parties": {
+        "landlord": "TOWN OF SWAMPSCOTT",
+        "tenant": "Not specified",
+        "property": "[ADDRESS_REDACTED], Swampscott, Massachusetts"
+      },
+      "leaseDetails": {
+        "leaseType": "Commercial",
+        "propertyAddress": "[ADDRESS_REDACTED], Swampscott, Massachusetts",
+        "leaseTerm": "Term commences on a date in 2019 and expires on a date in 20__, with tenant having the option to extend for a ____ year term, for a total maximum term of _____ years.",
+        "monthlyRent": "Base rent of $_______________ per year, payable in monthly installments of $_____ per month, increasing annually by ____%.",
+        "securityDeposit": "Not specified",
+        "specialClauses": [
+          "Premises accepted 'AS IS'",
+          "Tenant responsible for taxes, rates, charges, assessments, license fees, municipal liens, levies, excises, water and sewer charges.",
+          "Tenant responsible for utilities.",
+          "Tenant responsible for maintaining premises in good condition.",
+          "Landlord responsible for electrical wiring and lighting, plumbing, heating and ventilating system, fire protection equipment, roof, exterior walls and foundations.",
+          "Landlord responsible for removing snow and ice"
+        ]
+      },
+      "pageCount": 16,
+      "fileSize": "140 KB",
+      "uploadDate": "2025-11-08"
+    }
+  },
+  "ec0260d8-d841-4cc7-a131-e86509660816": {
+    "file_id": "ec0260d8-d841-4cc7-a131-e86509660816",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/ec0260d8-d841-4cc7-a131-e86509660816.pdf",
+    "redacted_text_path": "uploads/ec0260d8-d841-4cc7-a131-e86509660816_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:41:19.704568",
+    "status": "failed",
+    "progress": 0,
+    "message": "Analysis failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 50\nPlease retry in 5.810939706s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n}\n, retry_delay {\n  seconds: 5\n}\n]",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 13,
+      "organization": 37
+    },
+    "extracted_metadata": {
+      "fileName": "Swampscott Lease Agreement for [ADDRESS_REDACTED]",
+      "documentType": "Lease Agreement",
+      "parties": {
+        "landlord": "TOWN OF SWAMPSCOTT",
+        "tenant": "Not specified",
+        "property": "[ADDRESS_REDACTED], Swampscott, Massachusetts"
+      },
+      "leaseDetails": {
+        "leaseType": "Commercial",
+        "propertyAddress": "[ADDRESS_REDACTED], Swampscott, Massachusetts",
+        "leaseTerm": "Commences on [DATE_REDACTED], 2019 and expires on [DATE_REDACTED]. Option to extend for a [NUMBER_REDACTED] year term, for a total maximum term of [NUMBER_REDACTED] years.",
+        "monthlyRent": "Base rent plus Taxes",
+        "securityDeposit": "Not specified",
+        "specialClauses": [
+          "Premises delivered \"AS IS\"",
+          "Tenant responsible for taxes, rates, charges, assessments, license fees, municipal liens, levies, excises, water and sewer charges",
+          "Tenant responsible for maintaining premises in good and clean condition",
+          "Landlord responsible for electrical wiring and lighting, all plumbing and utility lines serving the premises, the heating and ventilating system and the fire protection equipment and systems serving the Building, the roof, exterior walls and foundations of the Building"
+        ]
+      },
+      "pageCount": 16,
+      "fileSize": "140 KB",
+      "uploadDate": "2025-11-08"
+    },
+    "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 50\nPlease retry in 5.810939706s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n}\n, retry_delay {\n  seconds: 5\n}\n]"
+  },
+  "7ab24dd0-9169-49af-b6a6-e0c78eb5d7fc": {
+    "file_id": "7ab24dd0-9169-49af-b6a6-e0c78eb5d7fc",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/7ab24dd0-9169-49af-b6a6-e0c78eb5d7fc.pdf",
+    "redacted_text_path": "uploads/7ab24dd0-9169-49af-b6a6-e0c78eb5d7fc_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:44:03.700594",
+    "status": "metadata_extraction_failed",
+    "progress": 0,
+    "message": "Metadata extraction failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 50\nPlease retry in 53.666762352s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n}\n, retry_delay {\n  seconds: 53\n}\n]",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 13,
+      "organization": 37
+    },
+    "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 50\nPlease retry in 53.666762352s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n}\n, retry_delay {\n  seconds: 53\n}\n]"
+  },
+  "63ad48c7-3f91-4c1a-926c-7f3a81dfcd0c": {
+    "file_id": "63ad48c7-3f91-4c1a-926c-7f3a81dfcd0c",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/63ad48c7-3f91-4c1a-926c-7f3a81dfcd0c.pdf",
+    "redacted_text_path": "uploads/63ad48c7-3f91-4c1a-926c-7f3a81dfcd0c_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:45:57.247521",
+    "status": "metadata_extraction_failed",
+    "progress": 0,
+    "message": "Metadata extraction failed: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 50\nPlease retry in 197.84464ms. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n}\n, retry_delay {\n}\n]",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 13,
+      "organization": 37
+    },
+    "error": "429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 50\nPlease retry in 197.84464ms. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://ai.google.dev/gemini-api/docs/rate-limits\"\n}\n, violations {\n}\n, retry_delay {\n}\n]"
+  },
+  "f9e36551-5593-4ff1-99f4-dee7df9014c7": {
+    "file_id": "f9e36551-5593-4ff1-99f4-dee7df9014c7",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/f9e36551-5593-4ff1-99f4-dee7df9014c7.pdf",
+    "redacted_text_path": "uploads/f9e36551-5593-4ff1-99f4-dee7df9014c7_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:51:18.923150",
+    "status": "uploaded",
+    "progress": 0,
+    "message": "Document uploaded and PII redacted",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 13,
+      "organization": 36
+    }
+  },
+  "b1b5337a-5b44-48d8-a9e1-56144596be76": {
+    "file_id": "b1b5337a-5b44-48d8-a9e1-56144596be76",
+    "filename": "sample-lease.pdf",
+    "file_path": "uploads/b1b5337a-5b44-48d8-a9e1-56144596be76.pdf",
+    "redacted_text_path": "uploads/b1b5337a-5b44-48d8-a9e1-56144596be76_redacted.txt",
+    "size": 143438,
+    "uploaded_at": "2025-11-08T15:51:29.097408",
+    "status": "completed",
+    "progress": 100,
+    "message": "Analysis complete",
+    "pii_redacted": {
+      "address": 3,
+      "person_name": 13,
+      "organization": 36
+    },
+    "analysis": {
+      "documentId": "b1b5337a-5b44-48d8-a9e1-56144596be76",
+      "pdfUrl": "/b1b5337a-5b44-48d8-a9e1-56144596be76.pdf",
+      "documentMetadata": {
+        "fileName": "sample-lease.pdf",
+        "uploadDate": "2025-11-08",
+        "fileSize": "140 KB",
+        "pageCount": 16,
+        "documentType": "Lease Agreement",
+        "parties": {
+          "landlord": "See document",
+          "tenant": "See document",
+          "property": "See document"
+        }
+      },
+      "deidentificationSummary": {
+        "itemsRedacted": 0,
+        "categories": []
+      },
+      "keyDetailsDetected": {
+        "leaseType": "To be determined",
+        "propertyAddress": "See document",
+        "landlord": "See document",
+        "leaseTerm": "See document",
+        "monthlyRent": "See document",
+        "securityDeposit": "See document",
+        "specialClauses": []
+      },
+      "analysisSummary": {
+        "status": "complete",
+        "summaryText": "Analysis Complete \u2014 8 key issues found. \u26a0\ufe0f  Found 8 illegal clause(s) that violate Massachusetts law | \u26a1 Identified 10 risky term(s) that could be problematic | \u2713 Found 6 tenant-favorable provision(s) | Power Imbalance Score: 100/100 (Concerning)",
+        "overallRisk": "Critical",
+        "issuesFound": 8,
+        "potential_recovery": 3400,
+        "estimatedRecovery": "$3,400",
+        "topIssues": [
+          {
+            "title": "Chapter 186, Section 15E",
+            "severity": "high",
+            "amount": "$100"
+          },
+          {
+            "title": "Chapter 186, Section 15",
+            "severity": "critical",
+            "amount": "$500"
+          },
+          {
+            "title": "Chapter 186, Section 15",
+            "severity": "critical",
+            "amount": "$500"
+          }
+        ]
+      },
+      "highlights": [
+        {
+          "id": "hl-001",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15E",
+          "text": "The [NAME_REDACTED]ses are delivered to [NAME_REDACTED] and [NAME_REDACTED] accepts the [NAME_REDACTED]ses in their present condition, \u201cAS IS,\u201d it being agreed that [NAME_REDACTED] has had a n opportunity to examine and inspect the [NAME_REDACTED]ses in all respects, that [NAME_REDACTED]dlord has made no representations or warranties of any kind with respect thereto, and that [NAME_REDACTED]dlord shall have no obligation to do any work on, or make any improvements to the [NAME_REDACTED] ses or the condition thereof.",
+          "statute": "Chapter 186, Section 15E",
+          "explanation": "This clause attempts to waive the landlord's responsibility for defects, potentially including violations of the building code, existing at the time of letting, which is prohibited by M.G.L. c. 186, \u00a7 15E. Specifically, Section 15E states that an owner cannot raise as a defense in an action brought by a tenant for an injury caused by a defect in a common area, that the defect existed at the time of the letting, if that defect is a building code violation at the time of the injury. The waiver of this provision is void and unenforceable.",
+          "damages_estimate": 100,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-002",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "9.2. Release.  To the maximum extent this [NAME_REDACTED]se may be made effective according to law, [NAME_REDACTED] agrees to use and occupy the [NAME_REDACTED]s es at [NAME_REDACTED]'s own risk, and [NAME_REDACTED]dlord shall have no responsibility or liability for any loss or damage to fixtures or other personal property of [NAME_REDACTED] or any person claiming by, through or under [NAME_REDACTED].  Without limitation, [NAME_REDACTED] agrees that [NAME_REDACTED]dlord sha ll not be responsible or liable to [NAME_REDACTED], or those claiming by, through or under [NAME_REDACTED], for any loss or damage resulting to [NAME_REDACTED] or those claiming by, through or under [NAME_REDACTED], its or their property from the breaking, bursting, stopping or leaking of [ORG_REDACTED] and wires, and water, gas or steam pipes.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause attempts to exculpate the landlord from liability for damage to the tenant's property, which is prohibited by M.G.L. c. 186, \u00a7 15.  Specifically, the landlord cannot contractually eliminate liability for damages caused by defects in the property, including those relating to utilities such as water, gas, and electricity. This clause is an illegal attempt to shift the responsibility for property damage to the tenant, even if the damage is due to the landlord's negligence or failure to maintain the property.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-003",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "9.1. Indemnification.  [NAME_REDACTED] shall, during the term hereof, assume and maintain exclusive control of \nthe [NAME_REDACTED]ses and defend, indemn ify and save harmless [NAME_REDACTED]dlord from and against all claims, expenses \nor liability of whatever nature arising from any act, omission or negligence of [NAME_REDACTED], [NAME_REDACTED]'s \ncontractors, agents, employees, customers, and invitees, or anyone claiming by, through or  under \n[NAME_REDACTED], or arising, directly or indirectly, from any accident, injury or damage whatsoever, however \ncaused, to any person, or to the property of any person, occurring after [NAME_REDACTED] enters the [NAME_REDACTED]ses for \nany reason and until the end of the term of t his [NAME_REDACTED]se and, thereafter, so long as [NAME_REDACTED] or any occupant \nclaiming under [NAME_REDACTED] is in occupancy of any part of the [NAME_REDACTED]ses, in or about the [NAME_REDACTED]ses, or arising \nfrom any accident occurring outside the [NAME_REDACTED]ses but within the general area of the [NAME_REDACTED]se s, where \nsuch accident, injury or damage results or is claimed to have resulted from any act, omission or \nnegligence on the part of [NAME_REDACTED] or [NAME_REDACTED]'s contractors, agents, employees, customers, and invitees, or \nanyone claiming by, through or under [NAME_REDACTED].",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause requires the tenant to indemnify the landlord for claims arising from *any* act, omission, or negligence, regardless of whether it's the tenant's fault or the landlord's fault. This is an illegal indemnification clause under Massachusetts law which prohibits landlords from requiring tenants to indemnify them from the landlord's own negligence.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-004",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "9.2. Release.  To the maximum extent this [NAME_REDACTED]se may be made effective according to law, [NAME_REDACTED] \nagrees to use and occupy the [NAME_REDACTED]s es at [NAME_REDACTED]'s own risk, and [NAME_REDACTED]dlord shall have no responsibility or \nliability for any loss or damage to fixtures or other personal property of [NAME_REDACTED] or any person claiming \nby, through or under [NAME_REDACTED].  Without limitation, [NAME_REDACTED] agrees that [NAME_REDACTED]dlord sha ll not be responsible \nor liable to [NAME_REDACTED], or those claiming by, through or under [NAME_REDACTED], for any loss or damage resulting to \n[NAME_REDACTED] or those claiming by, through or under [NAME_REDACTED], its or their property from the breaking, bursting, \nstopping or leaking of [ORG_REDACTED] and wires, and water, gas or steam pipes.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause attempts to release the landlord from liability for any loss or damage to the tenant's property, even if caused by the landlord's negligence (e.g., leaking pipes due to poor maintenance). This is an illegal exculpatory clause under Massachusetts law.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-005",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "10.3.  [ORG_REDACTED].  [NAME_REDACTED]dlord shall be named as an additional insured on all \ninsurance policies.  All required insurance shall be written with such companies qualified to do business \nin Massachusetts, as [NAME_REDACTED] shall select and [NAME_REDACTED]dlord shall approve, which  approval [NAME_REDACTED]dlord agrees not \nto withhold unreasonably. Without limiting [NAME_REDACTED]dlord's other rights under any other provisions of this \n[NAME_REDACTED]se, if [NAME_REDACTED] shall fail to keep the [NAME_REDACTED]ses insured as provided herein, and if such failure shall \ncontinue to a period of ten (10) days following written notice by [NAME_REDACTED]dlord to [NAME_REDACTED] thereof, then \n[NAME_REDACTED]dlord, without further notice to [NAME_REDACTED], may take out and pay for such insurance, and the amount of \nsuch payment shall become due and payable as [ORG_REDACTED] on demand. [NAME_REDACTED] hereby waives any and all rights of recovery which it might otherwise have against \n[NAME_REDACTED]dlord, its agents, employees and other persons for whom [NAME_REDACTED]dlord may be responsible for any loss \nor damage to [NAME_REDACTED] property or improvements in the [NAME_REDACTED]ses whi ch are either required to be \ninsured under the terms of this [NAME_REDACTED]se or which [NAME_REDACTED], in the absence of any such requirement, elects to \ninsure, notwithstanding that the loss or damage may result from the negligence, willful act or default \nunder the terms of this [NAME_REDACTED]se by [NAME_REDACTED]dlord, its agents, employees, contractors, or other persons for \nwhom [NAME_REDACTED]dlord may be responsible.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause contains a waiver of subrogation and release from liability for the landlord's negligence, which is illegal. The tenant is waiving the right to recover from the landlord even if the landlord is negligent.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-006",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "(c) If any part of the [NAME_REDACTED]ses is damaged by fire or other casualty or is taken by a public \nauthority and this [NAME_REDACTED]se is not terminated by [NAME_REDACTED]dlord or [NAME_REDACTED] as provided above, [NAME_REDACTED] shall \nproceed with reasonable diligence to repair and restore the [NAME_REDACTED]ses, or what remains thereof in the \ncase of a partial taking, to its condition prior to such t aking.  [NAME_REDACTED] acknowledges and agrees that in no \nevent shall [NAME_REDACTED]dlord be liable for any injury, harm or any other loss, cost, expense, demand, claim, or \nhave any obligation to repair, replace, improve, restore and/or rebuild, any damage of any kind or \nnature whatsoever to the [NAME_REDACTED]ses or any portion thereof caused by an eminent domain taking or by \nfire, flood or other casualty.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause attempts to release the landlord from the obligation to repair the premises in the event of fire, flood or casualty. While landlords can allocate responsibilities in a lease, they cannot exculpate themselves from liability for damages caused by their own negligence. If the damage is a result of the landlord's negligence or failure to maintain the property, this clause is likely unenforceable.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-007",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "[NAME_REDACTED] hereby waives any and all rights of recovery which it might otherwise have against \n[NAME_REDACTED]dlord, its agents, employees and other persons for whom [NAME_REDACTED]dlord may be responsible for any loss \nor damage to [NAME_REDACTED] property or improvements in the [NAME_REDACTED]ses whi ch are either required to be \ninsured under the terms of this [NAME_REDACTED]se or which [NAME_REDACTED], in the absence of any such requirement, elects to \ninsure, notwithstanding that the loss or damage may result from the negligence, willful act or default \nunder the terms of this [NAME_REDACTED]se by [NAME_REDACTED]dlord, its agents, employees, contractors, or other persons for \nwhom [NAME_REDACTED]dlord may be responsible.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause attempts to indemnify the landlord and preclude them from liability for their own negligence, willful acts, or defaults, which is prohibited by Massachusetts law. It is an exculpatory clause that shifts the burden of the landlord's negligence onto the tenant, and attempts to waive rights.",
+          "damages_estimate": 500,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-008",
+          "pageNumber": 1,
+          "color": "red",
+          "priority": 1,
+          "category": "Chapter 186, Section 15",
+          "text": "[NAME_REDACTED] acknowledges and agrees that in no \nevent shall [NAME_REDACTED]dlord be liable for any injury, harm or any other loss, cost, expense, demand, claim, or \nhave any obligation to repair, replace, improve, restore and/or rebuild, any damage of any kind or \nnature whatsoever to the [NAME_REDACTED]ses or any portion thereof caused by an eminent domain taking or by \nfire, flood or other casualty.",
+          "statute": "Chapter 186, Section 15",
+          "explanation": "This clause attempts to absolve the landlord from liability or responsibility for repairs due to eminent domain, fire, flood, or other casualties. This is an attempt to limit liability for the landlord's obligations. This could violate Chapter 186 Section 15 depending on the specific interpretation of 'misconduct of the lessor or landlord'. It would likely be unenforceable if the damage or injury was the result of the landlord's negligence.",
+          "damages_estimate": 300,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-009",
+          "pageNumber": 3,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Potentially excessive interest on late rent payments and conflicts with M.G.L. c. 186, \u00a715B(1)(c).",
+          "text": "4.5. Interest. All payments becoming due under this [NAME_REDACTED]se and not paid when due s hall bear interest from the applicable due date until received by [NAME_REDACTED]dlord at an annual rate equal to the prime rate of interest charged from time to time by [ORG_REDACTED] or its successor, plus two percent (2%).",
+          "statute": "M.G.L. c. 186",
+          "explanation": "M.G.L. c. 186, \u00a715B(1)(c) states that no lease or other rental agreement shall impose any interest or penalty for failure to pay rent until thirty days after such rent shall have been due. This clause imposes interest immediately upon a late payment, which could be considered a penalty imposed before the 30-day grace period. The specific interest rate also needs to be checked to ensure it doesn't violate usury laws.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72.02,
+              "y1": 354.41,
+              "x2": 453.64,
+              "y2": 410.47,
+              "width": 381.61,
+              "height": 56.06,
+              "pageNumber": 3
+            },
+            "rects": [
+              {
+                "x1": 149.73,
+                "y1": 399.43,
+                "x2": 183.93,
+                "y2": 410.47,
+                "width": 34.19,
+                "height": 11.04,
+                "pageNumber": 3
+              },
+              {
+                "x1": 72.02,
+                "y1": 354.41,
+                "x2": 453.64,
+                "y2": 365.45,
+                "width": 381.61,
+                "height": 11.04,
+                "pageNumber": 3
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-010",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Unclear division of responsibility and potential for shifting landlord's repair obligations onto the tenant.",
+          "text": "6.1. [NAME_REDACTED] Responsibility.  [NAME_REDACTED] shall be responsible for maintaining the [NAME_REDACTED]ses in g ood and clean condition and order at its sole expense.  Without limiting the foregoing, [NAME_REDACTED] shall keep the [NAME_REDACTED]ses, including, without limitation, the electrical fixtures, windows, halls, stairwells, lavatories and all other areas of the Building, the landscaping (including, without limitation, keeping the grass neat and cut and trimming of trees and bushes) in good condition, damage by fire or other casualty, and ordinary wear and tear only excepted.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "While it's common for commercial leases to have tenants responsible for maintenance, this clause is overly broad. It assigns responsibility for 'all other areas of the Building,' which might include areas typically maintained by the landlord. It needs to be clearly defined which areas are solely for the tenant's use and which are common areas, and the tenant's responsibility should be limited to the leased premises and not extend to structural elements or common areas. The landlord is generally responsible for maintaining the structural integrity of the building and common areas. The clause also requires the tenant to maintain electrical fixtures, which can be problematic if those fixtures require specialized skills to repair.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-011",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "Shifting maintenance responsibilities to the tenant is unusual and possibly illegal depending on the exact nature of the required maintenance. Landlords typically have the statutory responsibility for maintaining the premises in habitable condition (implied warranty of habitability).",
+          "text": "6.4 [NAME_REDACTED] Failure to Maintain.  If any maintenance, repair and/or replacements is required to be \nmade by [NAME_REDACTED] pursuant to the terms hereof and [NAME_REDACTED] fails to cure the same within thirty (30) days \nafter no tice by [NAME_REDACTED]dlord (or, in the event of an emergency, with such notice as is practicable), [NAME_REDACTED]dlord \nshall have the right (but shall not be obligated) to make such repairs, replacements or perform \nmaintenance work or any other work required of [NAME_REDACTED] pursuant  to this [NAME_REDACTED]se and charge the cost \nthereof to [NAME_REDACTED] as [ORG_REDACTED], which, if not paid within thirty (30) days from the presentment of \ninvoices therefore, shall bear interest at the rate set forth herein.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "While commercial leases may allow for shifting some repair responsibilities to the tenant, residential leases have significant limitations. The phrase 'any other work required of [NAME_REDACTED] pursuant to this [NAME_REDACTED]se' is overly broad. This clause is ambiguous as to the type of maintenance being shifted to the tenant. If it includes items related to habitability, it could be deemed an illegal waiver of the landlord's duty to maintain a safe and habitable premises. It also isn't clear if the Landlord's notice has to be in writing, which could cause issues with proof. Charging the tenant interest for unpaid repair costs adds to the risk, as it is uncommon and could be seen as a penalty.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-012",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "The landlord has broad discretion to deny assignment or subletting. Although permissible in commercial leases, this may be problematic if unreasonably applied and found to violate the implied covenant of good faith and fair dealing.",
+          "text": "8.5 Assignment and Subleasing.  [NAME_REDACTED] shall not assign, sublet, underlet, mortgage, pledge or \nencumber (collectively referred to as \"[NAME_REDACTED]\") this [NAME_REDACTED]se without [NAME_REDACTED]dlord's prior written consent, \nwhich may be withheld in [NAME_REDACTED]dlord\u2019s sole discretion.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "While landlords generally have the right to approve or disapprove of potential assignees or sublessees, the 'sole discretion' clause gives the landlord unfettered power. While this may be acceptable in a commercial lease, a court may find that an arbitrary and unreasonable refusal to allow assignment or subletting violates the implied covenant of good faith and fair dealing, especially if the lease is for a long term and the tenant's circumstances change. The tenant may argue that the landlord is unreasonably preventing them from mitigating their damages should they need to move out before the lease term expires.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-013",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "The scope of indemnification is extremely broad and could potentially require the tenant to indemnify the landlord even for the landlord's own negligence.",
+          "text": "9.1. Indemnification.  [NAME_REDACTED] shall, during the term hereof, assume and maintain exclusive control of \nthe [NAME_REDACTED]ses and defend, indemn ify and save harmless [NAME_REDACTED]dlord from and against all claims, expenses \nor liability of whatever nature arising from any act, omission or negligence of [NAME_REDACTED], [NAME_REDACTED]'s \ncontractors, agents, employees, customers, and invitees, or anyone claiming by, through or  under \n[NAME_REDACTED], or arising, directly or indirectly, from any accident, injury or damage whatsoever, however \ncaused, to any person, or to the property of any person, occurring after [NAME_REDACTED] enters the [NAME_REDACTED]ses for \nany reason and until the end of the term of t his [NAME_REDACTED]se and, thereafter, so long as [NAME_REDACTED] or any occupant \nclaiming under [NAME_REDACTED] is in occupancy of any part of the [NAME_REDACTED]ses, in or about the [NAME_REDACTED]ses, or arising \nfrom any accident occurring outside the [NAME_REDACTED]ses but within the general area of the [NAME_REDACTED]se s, where \nsuch accident, injury or damage results or is claimed to have resulted from any act, omission or \nnegligence on the part of [NAME_REDACTED] or [NAME_REDACTED]'s contractors, agents, employees, customers, and invitees, or \nanyone claiming by, through or under [NAME_REDACTED].",
+          "statute": "M.G.L. c. 186",
+          "explanation": "While indemnification clauses are common, this clause is very broad and potentially problematic. It requires the tenant to indemnify the landlord against *all* claims arising from *any* act, omission or negligence of the tenant or anyone related to the tenant, even if the landlord is also negligent. Massachusetts courts disfavor indemnification clauses that require a party to indemnify another for its own negligence, unless the clause is clear and unequivocal. This clause may not meet that standard, and a court could find it unenforceable if the landlord is partially at fault for the underlying claim.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-014",
+          "pageNumber": 8,
+          "color": "orange",
+          "priority": 2,
+          "category": "The entire article deals with indemnification and release, which are areas prone to landlord overreach and potential violations of tenant rights.",
+          "text": "ARTICLE IX:  INDEMNIFICATION; RELEASE",
+          "statute": "M.G.L. c. 186",
+          "explanation": "The title itself signals that this article contains provisions requiring the tenant to give up rights or assume liabilities.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72.02,
+              "y1": 706.78,
+              "x2": 254.71,
+              "y2": 717.82,
+              "width": 182.69,
+              "height": 11.04,
+              "pageNumber": 8
+            },
+            "rects": [
+              {
+                "x1": 72.02,
+                "y1": 706.78,
+                "x2": 254.71,
+                "y2": 717.82,
+                "width": 182.69,
+                "height": 11.04,
+                "pageNumber": 8
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-015",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Requiring the tenant to maintain insurance even after the lease term ends could be problematic.",
+          "text": "10.1  [NAME_REDACTED] Insurance.  [NAME_REDACTED] shall obtain and keep in force at its own expense so long as this \n[NAME_REDACTED]se remains in effect and thereafter so long as [NAME_REDACTED], or anyone claiming by, through or under \n[NAME_REDACTED], uses or occupies the [NAME_REDACTED]ses or any part thereof, policies of insurance for the benefit of such \nparties, in the amounts, and in the manner and form se t forth in this Section; provided, however, that \namounts of insurance coverage may from time to time be increased.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "The clause is vague about when and why insurance is needed 'thereafter'. It could be interpreted as requiring the tenant to maintain insurance indefinitely, which is unreasonable.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-016",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "While seemingly reasonable on the surface, requiring the landlord's approval of the tenant's insurance company opens the door for potential abuse.",
+          "text": "10.3.  [ORG_REDACTED].  [NAME_REDACTED]dlord shall be named as an additional insured on all \ninsurance policies.  All required insurance shall be written with such companies qualified to do business \nin Massachusetts, as [NAME_REDACTED] shall select and [NAME_REDACTED]dlord shall approve, which  approval [NAME_REDACTED]dlord agrees not \nto withhold unreasonably.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "The landlord could unreasonably withhold approval and force the tenant to use a more expensive or less favorable insurance company.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-017",
+          "pageNumber": 1,
+          "color": "orange",
+          "priority": 2,
+          "category": "This clause assigns all rights to compensation from eminent domain to the landlord. While landlords are typically entitled to compensation for the value of the property, tenants are also usually entitled to compensation for the loss of their business, leasehold improvements, and relocation costs.",
+          "text": "(d) In the event of a taking by eminent domain, [NAME_REDACTED]dlord shall have, and hereby reserves and \nexcepts, and [NAME_REDACTED] hereby grants a nd assigns to [NAME_REDACTED]dlord, all rights to recover for damages to the \n[NAME_REDACTED]ses and the leasehold interest hereby created, and to compensation accrued or hereafter to \naccrue by reason of such taking or damage.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "This clause could deprive the tenant of compensation they are legally entitled to.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-018",
+          "pageNumber": 1,
+          "color": "yellow",
+          "priority": 3,
+          "category": "Indemnification could extend beyond what is legally permissible. Landlords cannot be indemnified for their own negligence under Massachusetts law.",
+          "text": "To the extent \npermitted by law, [NAME_REDACTED] shall indemnify [NAME_REDACTED] dlord against all payments which [NAME_REDACTED]dlord may incur by \nreason of such termination during the residue of the Term.",
+          "statute": "M.G.L. c. 186",
+          "explanation": "The clause stating the tenant will indemnify the landlord for payments incurred due to termination 'to the extent permitted by law' is risky because it's vague. It suggests indemnification could be required even when illegal. If the termination is a result of the Landlord's fault, indemnification is illegal under Massachusetts law",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-019",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "The landlord retains responsibility for essential building systems and structural elements, and for snow removal, which protects the tenant from potentially costly repairs and ensures safety.",
+          "text": "6.2 [NAME_REDACTED]dlord\u2019s Responsibility.  [NAME_REDACTED]dlord shall be responsible for the electrical wiring and lighting, all plumbing and utility lines serving the [NAME_REDACTED]ses, the heating and ventilating system and the fire protection equipment and syste ms serving the Building, the roof, exterior walls and foundations of the Building, in good and safe order, condition and repair, reasonable wear and tear and damage by fire or other casualty excepted.  [NAME_REDACTED] shall be responsible for removing snow and ice from the [NAME_REDACTED]ses, including all sidewalks, walkways, and parking areas.",
+          "statute": "Implied Warranty of Habitability; General landlord-tenant law regarding essential services.",
+          "explanation": "The landlord retains responsibility for essential building systems and structural elements, and for snow removal, which protects the tenant from potentially costly repairs and ensures safety.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-020",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "The Landlord gives 24 hours notice and is not to interfere unreasonably with tenant's use of the premise, which is beneficial to the tenant.",
+          "text": "6.3 Inspection.  Without limiting [NAME_REDACTED]dlord\u2019s rights to access the [NAME_REDACTED]ses under other provisions of this [NAME_REDACTED]se, [NAME_REDACTED]dlord hereby specifically reserves the right to conduct an annua l inspection of the [NAME_REDACTED]ses, and [NAME_REDACTED] shall allow entry and access to [ORG_REDACTED], [ORG_REDACTED], and such other persons as [ORG_REDACTED] may designate, for the purpose of investigating the condition of the of the [NAME_REDACTED]s es.  [NAME_REDACTED]dlord shall provide [NAME_REDACTED] with a minimum notice of twenty -four (24) hours, and not interfere unreasonably with [NAME_REDACTED] use of the [NAME_REDACTED]ses.  [NAME_REDACTED]dlord may provide [NAME_REDACTED] with a report of such assessments and list of repairs or maintenance that [NAME_REDACTED] dlord reasonably determines need to be made.",
+          "statute": "Chapter 186, Section 15B (1)(a)",
+          "explanation": "The Landlord gives 24 hours notice and is not to interfere unreasonably with tenant's use of the premise, which is beneficial to the tenant.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-021",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "The landlord's consent to signage cannot be 'unreasonably withheld'",
+          "text": "8.1 Permitted Uses.  [NAME_REDACTED] shall use the [NAME_REDACTED]ses solely for [ORG_REDACTED]. [NAME_REDACTED] shall keep \nthe [NAME_REDACTED]ses in good order, reasonable wear and tear and damage by fire or other casualty only \nexcepted, and shall not commit or permit [NAME_REDACTED]'s servants, agents or invitees to commit waste to the \n[NAME_REDACTED]ses.  [NAME_REDACTED] agrees not to erect any  signs on the [NAME_REDACTED]ses, including the exterior of the Building, \nwithout the prior written consent of the [NAME_REDACTED]dlord, which consent shall not be unreasonably withheld.",
+          "statute": null,
+          "explanation": "The landlord's consent to signage cannot be 'unreasonably withheld'",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-022",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "The landlord agrees not to unreasonably withhold approval of the tenant's insurance company.",
+          "text": "10.3.  [ORG_REDACTED].  [NAME_REDACTED]dlord shall be named as an additional insured on all \ninsurance policies.  All required insurance shall be written with such companies qualified to do business \nin Massachusetts, as [NAME_REDACTED] shall select and [NAME_REDACTED]dlord shall approve, which  approval [NAME_REDACTED]dlord agrees not \nto withhold unreasonably.",
+          "statute": "This can prevent the landlord from forcing the tenant to use a specific, potentially more expensive, insurance company.",
+          "explanation": "The landlord agrees not to unreasonably withhold approval of the tenant's insurance company.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-023",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "Guarantees the tenant's right to quiet enjoyment of the property",
+          "text": "13.2.  [NAME_REDACTED].  [NAME_REDACTED]dlord hereby warrants and covenants that [NAME_REDACTED] shall have peaceful and \nquiet use and possession of the [NAME_REDACTED]ses without hindrance or interruption on the part  of [NAME_REDACTED]dlord, or \nby any other person(s) for whose actions [NAME_REDACTED]dlord is legally responsible, or by any person claiming by, \nthrough or under [NAME_REDACTED]dlord, except as herein provided.",
+          "statute": "Implied Covenant of Quiet Enjoyment, generally recognized under MA law",
+          "explanation": "Guarantees the tenant's right to quiet enjoyment of the property",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        },
+        {
+          "id": "hl-024",
+          "pageNumber": 1,
+          "color": "green",
+          "priority": 3,
+          "category": "Limits the landlord's right to enter the premises to reasonable times, with notice, except in emergencies. Providing a right of notice before entry protects tenant's privacy and business operations.",
+          "text": "13.3.  [NAME_REDACTED]dlord\u2019s Entry.  [NAME_REDACTED]dlord or its agents may, at reasonable times and wit hout interfering with \n[NAME_REDACTED]'s business operations, enter the [NAME_REDACTED]ses from time to time to make repairs or to inspect the \n[NAME_REDACTED]ses.  [NAME_REDACTED]dlord shall give [NAME_REDACTED] a minimum of twenty -four (24) hours\u2019 notice for such visits, \nprovided however that [NAME_REDACTED]dlord may  enter the [NAME_REDACTED]ses at any hour and without prior notice in the \ncase of an emergency affecting the [NAME_REDACTED]ses.",
+          "statute": "Chapter 186, Section 15B",
+          "explanation": "Limits the landlord's right to enter the premises to reasonable times, with notice, except in emergencies. Providing a right of notice before entry protects tenant's privacy and business operations.",
+          "damages_estimate": 0,
+          "position": {
+            "boundingRect": {
+              "x1": 72,
+              "y1": 542,
+              "x2": 540,
+              "y2": 592,
+              "width": 468,
+              "height": 50,
+              "pageNumber": 1
+            },
+            "rects": [
+              {
+                "x1": 72,
+                "y1": 542,
+                "x2": 540,
+                "y2": 592,
+                "width": 468,
+                "height": 50,
+                "pageNumber": 1
+              }
+            ],
+            "pageHeight": 792,
+            "pageWidth": 612
+          }
+        }
+      ],
+      "document_info": {
+        "total_characters": 44361,
+        "total_chunks": 4,
+        "analysis_date": "2025-11-08T15:52:48.041923"
+      }
+    },
+    "analyzed_at": "2025-11-08T15:52:48.115170"
   }
 }
