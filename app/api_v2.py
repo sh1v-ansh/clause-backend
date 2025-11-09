@@ -41,6 +41,29 @@ async def root():
         "architecture": "modular"
     }
 
+@app.post("/analyze-listing")
+async def analyze_listing(listing_data: dict):
+    # Hardcoded demo response
+    return {
+        "listing_id": listing_data["listing_id"],
+        "risk_score": 75,
+        "risk_level": "high",
+        "violations": [
+            {
+                "title": "Cash-only cleaning fee",
+                "description": "Requiring cash payment violates Airbnb Terms of Service",
+                "law": "Airbnb ToS Section 5.3",
+                "severity": "high"
+            },
+            {
+                "title": "Non-refundable security deposit",
+                "description": "MA law requires security deposits to be refundable",
+                "law": "M.G.L. c. 186 § 15B",
+                "severity": "high"
+            }
+        ]
+    }
+
 
 if __name__ == "__main__":
     import uvicorn
