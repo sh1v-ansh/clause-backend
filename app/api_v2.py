@@ -5,7 +5,7 @@ Clean, modular architecture with separate routes and services
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routes import upload, analysis, documents, chat
+from routes import upload, analysis, documents, chat, demand_letter
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -28,6 +28,7 @@ app.include_router(upload.router, tags=["Upload"])
 app.include_router(analysis.router, tags=["Analysis"])
 app.include_router(documents.router, tags=["Documents"])
 app.include_router(chat.router, tags=["Chat"])
+app.include_router(demand_letter.router, prefix="/demand-letter", tags=["Demand Letter"])
 
 
 # Health check endpoint
