@@ -5,7 +5,7 @@ Clean, modular architecture with separate routes and services
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routes import upload, analysis, documents, chat, demand_letter
+from routes import upload, analysis, documents, chat, demand_letter, voice_chat
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -24,9 +24,11 @@ app.add_middleware(
 )
 
 # Include routers
+# Note: voice_chat must be registered BEFORE chat to avoid route conflict
 app.include_router(upload.router, tags=["Upload"])
 app.include_router(analysis.router, tags=["Analysis"])
 app.include_router(documents.router, tags=["Documents"])
+app.include_router(voice_chat.router, tags=["Voice Chat"])  # Register before chat to avoid /chat/voice conflict
 app.include_router(chat.router, tags=["Chat"])
 app.include_router(demand_letter.router, prefix="/demand-letter", tags=["Demand Letter"])
 

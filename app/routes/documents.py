@@ -29,13 +29,22 @@ async def get_document_analysis(file_id: str):
                 "progress": doc.get("progress", 0)
             }
         
+        # Get analysis data
+        analysis = doc.get("analysis", {})
+        
+        # Ensure documentId is set in the analysis object for frontend consistency
+        # This ensures the frontend always has the file_id available
+        if analysis and isinstance(analysis, dict):
+            if "documentId" not in analysis or not analysis.get("documentId") or analysis.get("documentId") == "1":
+                analysis["documentId"] = file_id
+        
         return {
             "file_id": file_id,
             "filename": doc["filename"],
             "uploaded_at": doc["uploaded_at"],
             "analyzed_at": doc.get("analyzed_at"),
             "status": "completed",
-            "analysis": doc.get("analysis", {})
+            "analysis": analysis
         }
         
     except HTTPException:
